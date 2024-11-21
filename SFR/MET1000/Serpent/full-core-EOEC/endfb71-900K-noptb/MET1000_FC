@@ -1,0 +1,770 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          MET1000
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% If you use the models in your work, please cite our paper for which
+% we developed the model:
+% Ryzhkov, A.A., Tikhomirov, G.V., Ternovykh, M.Yu.,Gerasimov, A.S., 2023. 
+% Evaluation of technological uncertainties using the sensitivity to nuclear
+% data. Atomic Energy 135, 162-165. 
+% https://doi.org/10.1007/s10512-024-01103-w
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mat inner_fuel_1 sum tmp 900
+    U-234.09c   1.8287E-06
+    U-235.09c   2.4267E-05
+    U-236.09c   3.8348E-06
+    U-238.09c   1.9080E-02
+    Np-237.09c  4.2039E-05
+    Pu-236.09c  5.8848E-10
+    Pu-238.09c  1.1306E-04
+    Pu-239.09c  2.1915E-03
+    Pu-240.09c  1.3132E-03
+    Pu-241.09c  1.9156E-04
+    Pu-242.09c  2.8455E-04
+    Am-241.09c  9.5712E-05
+    Am-242m.09c 9.4584E-06
+    Am-243.09c  9.4543E-05
+    Cm-242.09c  7.0997E-06
+    Cm-243.09c  7.7326E-07
+    Cm-244.09c  7.2896E-05
+    Cm-245.09c  1.6466E-05
+    Cm-246.09c  9.3179E-06
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0385E-04
+    Mo-92.09c   3.1249E-04
+    Mo-94.09c   1.9528E-04
+    Mo-95.09c   3.3640E-04
+    Mo-96.09c   3.5290E-04
+    Mo-97.09c   2.0226E-04
+    Mo-98.09c   5.1179E-04
+    Mo-100.09c  2.0459E-04
+
+mat inner_fuel_2 sum tmp 900
+    U-234.09c   1.7464E-06
+    U-235.09c   2.2703E-05
+    U-236.09c   3.8253E-06
+    U-238.09c   1.8846E-02
+    Np-237.09c  4.2589E-05
+    Pu-236.09c  7.1975E-10
+    Pu-238.09c  1.0695E-04
+    Pu-239.09c  2.1613E-03
+    Pu-240.09c  1.2652E-03
+    Pu-241.09c  1.8154E-04
+    Pu-242.09c  2.7834E-04
+    Am-241.09c  9.0753E-05
+    Am-242m.09c 9.0121E-06
+    Am-243.09c  9.1729E-05
+    Cm-242.09c  7.2237E-06
+    Cm-243.09c  7.5394E-07
+    Cm-244.09c  7.0894E-05
+    Cm-245.09c  1.5274E-05
+    Cm-246.09c  9.1820E-06
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0386E-04
+    Mo-92.09c   3.8272E-04
+    Mo-94.09c   2.3917E-04
+    Mo-95.09c   4.1200E-04
+    Mo-96.09c   4.3221E-04
+    Mo-97.09c   2.4772E-04
+    Mo-98.09c   6.2681E-04
+    Mo-100.09c  2.5057E-04
+
+mat inner_fuel_3 sum tmp 900
+    U-234.09c   1.7210E-06
+    U-235.09c   2.2106E-05
+    U-236.09c   3.8904E-06
+    U-238.09c   1.8774E-02
+    Np-237.09c  4.2264E-05
+    Pu-236.09c  7.3569E-10
+    Pu-238.09c  1.0560E-04
+    Pu-239.09c  2.1525E-03
+    Pu-240.09c  1.2570E-03
+    Pu-241.09c  1.8043E-04
+    Pu-242.09c  2.7677E-04
+    Am-241.09c  8.8828E-05
+    Am-242m.09c 8.9023E-06
+    Am-243.09c  9.1054E-05
+    Cm-242.09c  7.4075E-06
+    Cm-243.09c  7.7307E-07
+    Cm-244.09c  7.1010E-05
+    Cm-245.09c  1.5116E-05
+    Cm-246.09c  9.1659E-06
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0385E-04
+    Mo-92.09c   4.0303E-04
+    Mo-94.09c   2.5186E-04
+    Mo-95.09c   4.3386E-04
+    Mo-96.09c   4.5515E-04
+    Mo-97.09c   2.6086E-04
+    Mo-98.09c   6.6007E-04
+    Mo-100.09c  2.6387E-04
+
+mat inner_fuel_4 sum tmp 900
+    U-234.09c   1.7764E-06
+    U-235.09c   2.3630E-05
+    U-236.09c   3.6660E-06
+    U-238.09c   1.8956E-02
+    Np-237.09c  4.3414E-05
+    Pu-236.09c  7.1148E-10
+    Pu-238.09c  1.0811E-04
+    Pu-239.09c  2.1639E-03
+    Pu-240.09c  1.2692E-03
+    Pu-241.09c  1.8083E-04
+    Pu-242.09c  2.8014E-04
+    Am-241.09c  9.3685E-05
+    Am-242m.09c 9.1452E-06
+    Am-243.09c  9.2383E-05
+    Cm-242.09c  6.9780E-06
+    Cm-243.09c  7.1317E-07
+    Cm-244.09c  7.0175E-05
+    Cm-245.09c  1.5268E-05
+    Cm-246.09c  9.1722E-06
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0385E-04
+    Mo-92.09c   3.5860E-04
+    Mo-94.09c   2.2410E-04
+    Mo-95.09c   3.8604E-04
+    Mo-96.09c   4.0497E-04
+    Mo-97.09c   2.3211E-04
+    Mo-98.09c   5.8731E-04
+    Mo-100.09c  2.3478E-04
+
+mat inner_fuel_5 sum tmp 900
+    U-234.09c   1.9079E-06
+    U-235.09c   2.7069E-05
+    U-236.09c   3.2386E-06
+    U-238.09c   1.9348E-02
+    Np-237.09c  4.5039E-05
+    Pu-236.09c  5.8989E-10
+    Pu-238.09c  1.1477E-04
+    Pu-239.09c  2.1956E-03
+    Pu-240.09c  1.3112E-03
+    Pu-241.09c  1.8570E-04
+    Pu-242.09c  2.8850E-04
+    Am-241.09c  1.0442E-04
+    Am-242m.09c 9.7079E-06
+    Am-243.09c  9.5601E-05
+    Cm-242.09c  6.1283E-06
+    Cm-243.09c  6.3410E-07
+    Cm-244.09c  6.9521E-05
+    Cm-245.09c  1.6039E-05
+    Cm-246.09c  9.2397E-06
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0385E-04
+    Mo-92.09c   2.5737E-04
+    Mo-94.09c   1.6083E-04
+    Mo-95.09c   2.7706E-04
+    Mo-96.09c   2.9065E-04
+    Mo-97.09c   1.6658E-04
+    Mo-98.09c   4.2151E-04
+    Mo-100.09c  1.6850E-04
+
+mat outer_fuel_1 sum tmp 900
+    U-234.09c   2.6749E-06
+    U-235.09c   2.6653E-05
+    U-236.09c   2.8172E-06
+    U-238.09c   1.7914E-02
+    Np-237.09c  8.9603E-05
+    Pu-236.09c  9.8954E-10
+    Pu-238.09c  1.6477E-04
+    Pu-239.09c  2.7012E-03
+    Pu-240.09c  1.7293E-03
+    Pu-241.09c  2.7597E-04
+    Pu-242.09c  4.0028E-04
+    Am-241.09c  1.7437E-04
+    Am-242m.09c 1.3196E-05
+    Am-243.09c  1.2765E-04
+    Cm-242.09c  8.2990E-06
+    Cm-243.09c  8.0947E-07
+    Cm-244.09c  8.4614E-05
+    Cm-245.09c  1.9441E-05
+    Cm-246.09c  1.0499E-05
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0386E-04
+    Mo-92.09c   2.6793E-04
+    Mo-94.09c   1.6743E-04
+    Mo-95.09c   2.8843E-04
+    Mo-96.09c   3.0258E-04
+    Mo-97.09c   1.7342E-04
+    Mo-98.09c   4.3881E-04
+    Mo-100.09c  1.7541E-04
+
+mat outer_fuel_2 sum tmp 900
+    U-234.09c   2.5827E-06
+    U-235.09c   2.5248E-05
+    U-236.09c   2.8830E-06
+    U-238.09c   1.7750E-02
+    Np-237.09c  8.8307E-05
+    Pu-236.09c  1.2250E-09
+    Pu-238.09c  1.5854E-04
+    Pu-239.09c  2.6334E-03
+    Pu-240.09c  1.6833E-03
+    Pu-241.09c  2.6534E-04
+    Pu-242.09c  3.9414E-04
+    Am-241.09c  1.6693E-04
+    Am-242m.09c 1.2874E-05
+    Am-243.09c  1.2462E-04
+    Cm-242.09c  8.6904E-06
+    Cm-243.09c  8.1124E-07
+    Cm-244.09c  8.3114E-05
+    Cm-245.09c  1.8483E-05
+    Cm-246.09c  1.0391E-05
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0385E-04
+    Mo-92.09c   3.3181E-04
+    Mo-94.09c   2.0735E-04
+    Mo-95.09c   3.5719E-04
+    Mo-96.09c   3.7472E-04
+    Mo-97.09c   2.1477E-04
+    Mo-98.09c   5.4343E-04
+    Mo-100.09c  2.1724E-04
+
+mat outer_fuel_3 sum tmp 900
+    U-234.09c   2.5566E-06
+    U-235.09c   2.4731E-05
+    U-236.09c   2.9516E-06
+    U-238.09c   1.7697E-02
+    Np-237.09c  8.7362E-05
+    Pu-236.09c  1.2619E-09
+    Pu-238.09c  1.5736E-04
+    Pu-239.09c  2.6132E-03
+    Pu-240.09c  1.6741E-03
+    Pu-241.09c  2.6364E-04
+    Pu-242.09c  3.9250E-04
+    Am-241.09c  1.6412E-04
+    Am-242m.09c 1.2832E-05
+    Am-243.09c  1.2395E-04
+    Cm-242.09c  9.0040E-06
+    Cm-243.09c  8.3343E-07
+    Cm-244.09c  8.3342E-05
+    Cm-245.09c  1.8342E-05
+    Cm-246.09c  1.0377E-05
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0385E-04
+    Mo-92.09c   3.5054E-04
+    Mo-94.09c   2.1906E-04
+    Mo-95.09c   3.7736E-04
+    Mo-96.09c   3.9587E-04
+    Mo-97.09c   2.2689E-04
+    Mo-98.09c   5.7410E-04
+    Mo-100.09c  2.2950E-04
+
+mat outer_fuel_4 sum tmp 900
+    U-234.09c   2.6029E-06
+    U-235.09c   2.5879E-05
+    U-236.09c   2.7665E-06
+    U-238.09c   1.7813E-02
+    Np-237.09c  8.9756E-05
+    Pu-236.09c  1.2075E-09
+    Pu-238.09c  1.5898E-04
+    Pu-239.09c  2.6495E-03
+    Pu-240.09c  1.6886E-03
+    Pu-241.09c  2.6552E-04
+    Pu-242.09c  3.9569E-04
+    Am-241.09c  1.7032E-04
+    Am-242m.09c 1.2894E-05
+    Am-243.09c  1.2502E-04
+    Cm-242.09c  8.4227E-06
+    Cm-243.09c  7.7944E-07
+    Cm-244.09c  8.2455E-05
+    Cm-245.09c  1.8467E-05
+    Cm-246.09c  1.0385E-05
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0385E-04
+    Mo-92.09c   3.1496E-04
+    Mo-94.09c   1.9682E-04
+    Mo-95.09c   3.3905E-04
+    Mo-96.09c   3.5568E-04
+    Mo-97.09c   2.0386E-04
+    Mo-98.09c   5.1583E-04
+    Mo-100.09c  2.0620E-04
+
+mat outer_fuel_5 sum tmp 900
+    U-234.09c   2.7159E-06
+    U-235.09c   2.8390E-05
+    U-236.09c   2.4368E-06
+    U-238.09c   1.8063E-02
+    Np-237.09c  9.3984E-05
+    Pu-236.09c  9.6571E-10
+    Pu-238.09c  1.6427E-04
+    Pu-239.09c  2.7397E-03
+    Pu-240.09c  1.7341E-03
+    Pu-241.09c  2.7377E-04
+    Pu-242.09c  4.0365E-04
+    Am-241.09c  1.8364E-04
+    Am-242m.09c 1.3097E-05
+    Am-243.09c  1.2795E-04
+    Cm-242.09c  7.4190E-06
+    Cm-243.09c  7.1488E-07
+    Cm-244.09c  8.1924E-05
+    Cm-245.09c  1.9145E-05
+    Cm-246.09c  1.0451E-05
+    Zr-90.09c   3.7457E-03
+    Zr-91.09c   8.1684E-04
+    Zr-92.09c   1.2486E-03
+    Zr-94.09c   1.2653E-03
+    Zr-96.09c   2.0385E-04
+    Mo-92.09c   2.3032E-04
+    Mo-94.09c   1.4393E-04
+    Mo-95.09c   2.4794E-04
+    Mo-96.09c   2.6011E-04
+    Mo-97.09c   1.4908E-04
+    Mo-98.09c   3.7722E-04
+    Mo-100.09c  1.5079E-04
+
+mat structure sum tmp 705.65
+    Cr-50.06c  4.5040E-04
+    Cr-52.06c  8.6856E-03
+    Cr-53.06c  9.8487E-04
+    Cr-54.06c  2.4516E-04
+    Mn-55.06c  4.5921E-04
+    Fe-54.06c  4.0748E-03
+    Fe-56.06c  6.3966E-02
+    Fe-57.06c  1.4773E-03
+    Fe-58.06c  1.9660E-04
+    Ni-58.06c  2.9262E-04
+    Ni-60.06c  1.1272E-04
+    Ni-61.06c  4.8997E-06
+    Ni-62.06c  1.5623E-05
+    Ni-64.06c  3.9786E-06
+    Mo-92.06c  7.2383E-05
+    Mo-94.06c  4.5233E-05
+    Mo-95.06c  7.7921E-05
+    Mo-96.06c  8.1744E-05
+    Mo-97.06c  4.6851E-05
+    Mo-98.06c  1.1855E-04
+    Mo-100.06c 4.7390E-05
+
+mat natural_absorber sum tmp 705.65
+    C-nat.06c   1.9657E-02
+    B-10.06c    1.5018E-02
+    B-11.06c    6.3609E-02
+
+mat enriched_absorber sum tmp 705.65
+    C-nat.06c   2.0632E-02
+    B-10.06c    5.3642E-02
+    B-11.06c    2.8884E-02
+
+mat helium sum tmp 705.65
+    He-4.06c 2.4600E-05
+
+mat na sum tmp 705.65
+    Na-23.06c 2.2272E-02
+
+mat lower_structure sum tmp 705.65
+    Na-23.06c  1.5591E-02
+    Cr-50.06c  1.4058E-04
+    Cr-52.06c  2.7110E-03
+    Cr-53.06c  3.0740E-04
+    Cr-54.06c  7.6520E-05
+    Mn-55.06c  5.0846E-04
+    Fe-54.06c  9.2807E-04
+    Fe-56.06c  1.4569E-02
+    Fe-57.06c  3.3645E-04
+    Fe-58.06c  4.4776E-05
+    Ni-58.06c  2.2196E-03
+    Ni-60.06c  8.5498E-04
+    Ni-61.06c  3.7165E-05
+    Ni-62.06c  1.1850E-04
+    Ni-64.06c  3.0178E-05
+    Mo-92.06c  6.4285E-05
+    Mo-94.06c  4.0173E-05
+    Mo-95.06c  6.9203E-05
+    Mo-96.06c  7.2598E-05
+    Mo-97.06c  4.1609E-05
+    Mo-98.06c  1.0528E-04
+    Mo-100.06c 4.2088E-05
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Pincells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+pin a
+    structure 0.3857
+    na
+
+pin r
+    structure 0.7757
+    na
+
+pin pPlenum
+    helium  0.3236
+    structure 0.3857
+    na    
+
+pin pInnerFuel_1
+    inner_fuel_1 0.3236
+    structure 0.3857
+    na
+
+pin pInnerFuel_2
+    inner_fuel_2 0.3236
+    structure 0.3857
+    na
+
+pin pInnerFuel_3
+    inner_fuel_3 0.3236
+    structure 0.3857
+    na
+
+pin pInnerFuel_4
+    inner_fuel_4 0.3236
+    structure 0.3857
+    na
+
+pin pInnerFuel_5
+    inner_fuel_5 0.3236
+    structure 0.3857
+    na
+
+pin pOuterFuel_1
+    outer_fuel_1 0.3236
+    structure 0.3857
+    na
+
+pin pOuterFuel_2
+    outer_fuel_2 0.3236
+    structure 0.3857
+    na
+
+pin pOuterFuel_3
+    outer_fuel_3 0.3236
+    structure 0.3857
+    na
+
+pin pOuterFuel_4
+    outer_fuel_4 0.3236
+    structure 0.3857
+    na
+
+pin pOuterFuel_5
+    outer_fuel_5 0.3236
+    structure 0.3857
+    na
+
+pin p
+    natural_absorber 1.0977
+    structure 1.1693
+    na
+
+pin s 
+    enriched_absorber 1.0977
+    structure 1.1693
+    na
+
+pin h
+    natural_absorber 1.4277
+    structure 1.6794
+    na
+
+pin pNa
+    na 0.3236
+    structure 0.3857
+    na
+
+pin c
+    na
+
+pin V
+    void
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+surf   s0 pz 0
+surf  s36 pz  35.76
+surf s161 pz 160.92
+surf s178 pz 178.08
+surf s195 pz 195.25
+surf s212 pz 212.41
+surf s230 pz 229.58
+surf s247 pz 246.74
+surf s267 pz 266.80
+surf s333 pz 333.49
+surf s368 pz 367.81
+surf s480 pz 480.20
+
+surf sID hexxc 0. 0. 7.50955
+surf sOD hexxc 0. 0. 7.90615
+surf sFA hexxc 0. 0. 8.12355
+surf sC  hexyc 0. 0. 200.0
+
+surf sCID hexxc 0. 0. 5.85965
+surf sCOD hexxc 0. 0. 6.25625
+
+
+cell cInnerPin0  i fill a                 -s161
+cell cInnerPin1  i fill pInnerFuel_1 s161 -s178
+cell cInnerPin2  i fill pInnerFuel_2 s178 -s195
+cell cInnerPin3  i fill pInnerFuel_3 s195 -s212
+cell cInnerPin4  i fill pInnerFuel_4 s212 -s230
+cell cInnerPin5  i fill pInnerFuel_5 s230 -s247
+cell cInnerPin6  i fill pNa          s247 -s267
+cell cInnerPin7  i fill pPlenum      s267 -s368
+cell cInnerPin8  i fill a            s368 
+
+
+cell cOuterPin0  o fill a                 -s161
+cell cOuterPin1  o fill pOuterFuel_1 s161 -s178
+cell cOuterPin2  o fill pOuterFuel_2 s178 -s195
+cell cOuterPin3  o fill pOuterFuel_3 s195 -s212
+cell cOuterPin4  o fill pOuterFuel_4 s212 -s230
+cell cOuterPin5  o fill pOuterFuel_5 s230 -s247
+cell cOuterPin6  o fill pNa          s247 -s267
+cell cOuterPin7  o fill pPlenum      s267 -s368
+cell cOuterPin8  o fill a            s368 
+
+
+lat IL 3 0 0 21 21 0.8966
+    c c c c c c c c c c c c c c c c c c c c c
+    c c c c c c c c c c i i i i i i i i i i c 
+    c c c c c c c c c i i i i i i i i i i i c 
+    c c c c c c c c i i i i i i i i i i i i c 
+    c c c c c c c i i i i i i i i i i i i i c 
+    c c c c c c i i i i i i i i i i i i i i c 
+    c c c c c i i i i i i i i i i i i i i i c 
+    c c c c i i i i i i i i i i i i i i i i c 
+    c c c i i i i i i i i i i i i i i i i i c 
+    c c i i i i i i i i i i i i i i i i i i c 
+    c i i i i i i i i i i i i i i i i i i i c 
+    c i i i i i i i i i i i i i i i i i i c c 
+    c i i i i i i i i i i i i i i i i i c c c 
+    c i i i i i i i i i i i i i i i i c c c c 
+    c i i i i i i i i i i i i i i i c c c c c 
+    c i i i i i i i i i i i i i i c c c c c c 
+    c i i i i i i i i i i i i i c c c c c c c 
+    c i i i i i i i i i i i i c c c c c c c c 
+    c i i i i i i i i i i i c c c c c c c c c 
+    c i i i i i i i i i i c c c c c c c c c c
+    c c c c c c c c c c c c c c c c c c c c c
+
+lat OL 3 0 0 21 21 0.8966
+    c c c c c c c c c c c c c c c c c c c c c
+    c c c c c c c c c c o o o o o o o o o o c 
+    c c c c c c c c c o o o o o o o o o o o c 
+    c c c c c c c c o o o o o o o o o o o o c 
+    c c c c c c c o o o o o o o o o o o o o c 
+    c c c c c c o o o o o o o o o o o o o o c 
+    c c c c c o o o o o o o o o o o o o o o c 
+    c c c c o o o o o o o o o o o o o o o o c 
+    c c c o o o o o o o o o o o o o o o o o c 
+    c c o o o o o o o o o o o o o o o o o o c 
+    c o o o o o o o o o o o o o o o o o o o c 
+    c o o o o o o o o o o o o o o o o o o c c 
+    c o o o o o o o o o o o o o o o o o c c c 
+    c o o o o o o o o o o o o o o o o c c c c 
+    c o o o o o o o o o o o o o o o c c c c c 
+    c o o o o o o o o o o o o o o c c c c c c 
+    c o o o o o o o o o o o o o c c c c c c c 
+    c o o o o o o o o o o o o c c c c c c c c 
+    c o o o o o o o o o o o c c c c c c c c c 
+    c o o o o o o o o o o c c c c c c c c c c
+    c c c c c c c c c c c c c c c c c c c c c
+
+lat AL 3 0 0 21 21 0.8966
+    c c c c c c c c c c c c c c c c c c c c c
+    c c c c c c c c c c a a a a a a a a a a c 
+    c c c c c c c c c a a a a a a a a a a a c 
+    c c c c c c c c a a a a a a a a a a a a c 
+    c c c c c c c a a a a a a a a a a a a a c 
+    c c c c c c a a a a a a a a a a a a a a c 
+    c c c c c a a a a a a a a a a a a a a a c 
+    c c c c a a a a a a a a a a a a a a a a c 
+    c c c a a a a a a a a a a a a a a a a a c 
+    c c a a a a a a a a a a a a a a a a a a c 
+    c a a a a a a a a a a a a a a a a a a a c 
+    c a a a a a a a a a a a a a a a a a a c c 
+    c a a a a a a a a a a a a a a a a a c c c 
+    c a a a a a a a a a a a a a a a a c c c c 
+    c a a a a a a a a a a a a a a a c c c c c 
+    c a a a a a a a a a a a a a a c c c c c c 
+    c a a a a a a a a a a a a a c c c c c c c 
+    c a a a a a a a a a a a a c c c c c c c c 
+    c a a a a a a a a a a a c c c c c c c c c 
+    c a a a a a a a a a a c c c c c c c c c c
+    c c c c c c c c c c c c c c c c c c c c c
+
+lat RL 3 0 0 13 13 1.5528
+    c c c c c c c c c c c c c
+     c c c c c c r r r r r r c
+      c c c c c r r r r r r r c
+       c c c c r r r r r r r r c
+        c c c r r r r r r r r r c
+         c c r r r r r r r r r r c
+          c r r r r r r r r r r r c
+           c r r r r r r r r r r c c
+            c r r r r r r r r r c c c
+             c r r r r r r r r c c c c
+              c r r r r r r r c c c c c
+               c r r r r r r c c c c c c
+                c c c c c c c c c c c c c
+
+lat HL 3 0 0 9 9 3.3603
+    c c c c c c c c c 
+     c c c c c c c c c
+      c c c c h h h c c
+       c c c h h h h c c
+        c c h h h h h c c
+         c c h h h h c c c
+          c c h h h c c c c
+           c c c c c c c c c
+            c c c c c c c c c
+
+lat PL 3 0 0 9 9 2.458
+    c c c c c c c c c 
+     c c c c c c c c c
+      c c c c p p p c c
+       c c c p p p p c c
+        c c p p p p p c c
+         c c p p p p c c c
+          c c p p p c c c c
+           c c c c c c c c c
+            c c c c c c c c c
+
+lat SL 3 0 0 9 9 2.458
+    c c c c c c c c c 
+     c c c c c c c c c
+      c c c c s s s c c
+       c c c s s s s c c
+        c c s s s s s c c
+         c c s s s s c c c
+          c c s s s c c c c
+           c c c c c c c c c
+            c c c c c c c c c
+
+cell  inner_lower     I  lower_structure           -s36
+cell  inner_assembly  I  fill IL              -sID  s36
+cell  inner_duct      I  structure        sID -sOD  s36
+cell  inner_sodium    I  na               sOD       s36
+
+cell  outer_lower     O  lower_structure           -s36
+cell  outer_assembly  O  fill OL              -sID  s36
+cell  outer_duct      O  structure        sID -sOD  s36
+cell  outer_sodium    O  na               sOD       s36
+
+cell  refl_lower     R  lower_structure            -s36
+cell  refl_bot       R  fill AL              -sID -s161  s36
+cell  refl_mid       R  fill RL              -sID -s368 s161
+cell  refl_top       R  fill AL              -sID       s368 
+cell  refl_duct      R  structure        sID -sOD        s36
+cell  refl_sodium    R  na               sOD             s36
+
+cell  shield_lower     H  lower_structure            -s36
+cell  shield_bot       H  fill AL              -sID -s161  s36
+cell  shield_mid       H  fill HL              -sID -s368 s161
+cell  shield_top       H  fill AL              -sID       s368 
+cell  shield_duct      H  structure        sID -sOD        s36
+cell  shield_sodium    H  na               sOD             s36
+
+cell primary_assembly  P fill PL                -sCID -s333  s247
+cell primary_ID        P structure        sCID  -sCOD -s333  s247
+cell primary_gap       P na               sCOD  -sID  -s333  s247
+cell primary_channel1  P na                     -sID         s333
+cell primary_channel2  P na                     -sID  -s247  s161
+cell primary_refl      P fill AL                -sID  -s161   s36
+cell primary_duct      P structure        sID   -sOD          s36
+cell primary_sodium    P na               sOD                 s36
+cell primary_lower     P lower_structure               -s36
+
+cell secondary_assembly  S fill SL                -sCID -s333  s247
+cell secondary_ID        S structure        sCID  -sCOD -s333  s247
+cell secondary_gap       S na               sCOD  -sID  -s333  s247
+cell secondary_channel1  S na                     -sID         s333
+cell secondary_channel2  S na                     -sID  -s247  s161
+cell secondary_refl      S fill AL                -sID  -s161   s36
+cell secondary_duct      S structure        sID   -sOD          s36
+cell secondary_sodium    S na               sOD                 s36
+cell secondary_lower     S lower_structure               -s36
+
+
+lat C 2 0 0 39 39 16.2471
+ V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+  V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+   V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+    V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+     V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+      V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+       V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+        V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+         V V V V V V V V V V V V V V V V V V V V V H H H H H H H H V V V V V V V V V V
+          V V V V V V V V V V V V V V V V V V V H H R R R R R R R H H V V V V V V V V V
+           V V V V V V V V V V V V V V V V V H H R R R R R R R R R R H H V V V V V V V V
+            V V V V V V V V V V V V V V V V H R R R R O O O O O R R R R H V V V V V V V V
+             V V V V V V V V V V V V V V V H R R R O O O O O O O O R R R H V V V V V V V V
+              V V V V V V V V V V V V V V H R R O O P O O P O O P O O R R H V V V V V V V V
+               V V V V V V V V V V V V V H R R O O O O I I I I O O O O R R H V V V V V V V V
+                V V V V V V V V V V V V H R R O O O I I I I I I I O O O R R H V V V V V V V V
+                 V V V V V V V V V V V H R R O O P I I S I I P I I P O O R R H V V V V V V V V
+                  V V V V V V V V V V H R R O O O I I I I I I I I I O O O R R H V V V V V V V V
+                   V V V V V V V V V V H R R O O I I I I I I I I I I O O R R H V V V V V V V V V
+                    V V V V V V V V V H R R O P O I P I I S I I S I O P O R R H V V V V V V V V V
+                     V V V V V V V V V H R R O O I I I I I I I I I I O O R R H V V V V V V V V V V
+                      V V V V V V V V H R R O O O I I I I I I I I I O O O R R H V V V V V V V V V V
+                       V V V V V V V V H R R O O P I I S I I P I I P O O R R H V V V V V V V V V V V
+                        V V V V V V V V H R R O O O I I I I I I I O O O R R H V V V V V V V V V V V V
+                         V V V V V V V V H R R O O O O I I I I O O O O R R H V V V V V V V V V V V V V
+                          V V V V V V V V H R R O O P O O P O O P O O R R H V V V V V V V V V V V V V V 
+                           V V V V V V V V H R R R O O O O O O O O R R R H V V V V V V V V V V V V V V V 
+                            V V V V V V V V H R R R R O O O O O R R R R H V V V V V V V V V V V V V V V V
+                             V V V V V V V V H H R R R R R R R R R R H H V V V V V V V V V V V V V V V V V
+                              V V V V V V V V V H H R R R R R R R H H V V V V V V V V V V V V V V V V V V V
+                               V V V V V V V V V V H H H H H H H H V V V V V V V V V V V V V V V V V V V V V
+                                V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+                                 V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+                                  V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V 
+                                   V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+                                    V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V 
+                                     V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+                                      V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+                                       V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+
+
+
+
+cell  core    0 fill C   -sC  s0 -s480    
+cell  outer1  0 outside   sC     
+cell  outer2  0 outside  -sC  -s0
+cell  outer3  0 outside  -sC      s480
+
+set pop 100000 9500 500
+set bc 1
+set gcu -1
+set ures no 
+
+plot 1 18000 19208   0   -225. 225.    0. 480.20
+plot 2 18000 19208   0   -225. 225.    0. 480.20
+plot 3 20000 20000 180   -225. 225. -225. 225.
+plot 3 20000 20000 300   -225. 225. -225. 225.
+
+set acelib "/mnt/e/Codes/NuclearData/Serpent/endfb71/s2v0_endfb71.xsdata"

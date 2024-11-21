@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plots>
+  <plot basis="xy" color_by="material" filename="plot_xy_central" id="1" type="slice">
+    <origin>0 0 180</origin>
+    <width>800 800</width>
+    <pixels>20000 20000</pixels>
+    <color id="1" rgb="255 0 0" />
+    <color id="2" rgb="255 0 0" />
+    <color id="3" rgb="255 0 0" />
+    <color id="4" rgb="255 0 0" />
+    <color id="5" rgb="255 0 0" />
+    <color id="6" rgb="0 0 255" />
+    <color id="7" rgb="0 0 255" />
+    <color id="8" rgb="0 0 255" />
+    <color id="9" rgb="0 0 255" />
+    <color id="10" rgb="0 0 255" />
+    <color id="11" rgb="0 0 0" />
+    <color id="12" rgb="192 192 192" />
+    <color id="13" rgb="255 255 0" />
+    <color id="14" rgb="165 42 42" />
+    <color id="15" rgb="0 128 0" />
+    <color id="16" rgb="255 165 0" />
+    <color id="17" rgb="255 192 203" />
+  </plot>
+  <plot basis="xy" color_by="material" filename="plot_xy_lower" id="2" type="slice">
+    <origin>0 0 250</origin>
+    <width>800 800</width>
+    <pixels>20000 20000</pixels>
+    <color id="1" rgb="255 0 0" />
+    <color id="2" rgb="255 0 0" />
+    <color id="3" rgb="255 0 0" />
+    <color id="4" rgb="255 0 0" />
+    <color id="5" rgb="255 0 0" />
+    <color id="6" rgb="0 0 255" />
+    <color id="7" rgb="0 0 255" />
+    <color id="8" rgb="0 0 255" />
+    <color id="9" rgb="0 0 255" />
+    <color id="10" rgb="0 0 255" />
+    <color id="11" rgb="0 0 0" />
+    <color id="12" rgb="192 192 192" />
+    <color id="13" rgb="255 255 0" />
+    <color id="14" rgb="165 42 42" />
+    <color id="15" rgb="0 128 0" />
+    <color id="16" rgb="255 165 0" />
+    <color id="17" rgb="255 192 203" />
+  </plot>
+  <plot basis="yz" color_by="material" filename="plot_yz" id="3" type="slice">
+    <origin>0 0 155.5732</origin>
+    <width>800 311.1464</width>
+    <pixels>32000 12446</pixels>
+    <color id="1" rgb="255 0 0" />
+    <color id="2" rgb="255 0 0" />
+    <color id="3" rgb="255 0 0" />
+    <color id="4" rgb="255 0 0" />
+    <color id="5" rgb="255 0 0" />
+    <color id="6" rgb="0 0 255" />
+    <color id="7" rgb="0 0 255" />
+    <color id="8" rgb="0 0 255" />
+    <color id="9" rgb="0 0 255" />
+    <color id="10" rgb="0 0 255" />
+    <color id="11" rgb="0 0 0" />
+    <color id="12" rgb="192 192 192" />
+    <color id="13" rgb="255 255 0" />
+    <color id="14" rgb="165 42 42" />
+    <color id="15" rgb="0 128 0" />
+    <color id="16" rgb="255 165 0" />
+    <color id="17" rgb="255 192 203" />
+  </plot>
+</plots>
