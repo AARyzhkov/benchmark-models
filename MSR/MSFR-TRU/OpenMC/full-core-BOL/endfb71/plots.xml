@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plots>
+  <plot basis="xy" color_by="material" filename="plot_xy" id="1" type="slice">
+    <origin>0 0 180</origin>
+    <width>453 453</width>
+    <pixels>20000 20000</pixels>
+    <color id="1" rgb="255 255 0" />
+    <color id="2" rgb="255 192 203" />
+    <color id="3" rgb="255 165 0" />
+    <color id="4" rgb="0 0 255" />
+  </plot>
+  <plot basis="xz" color_by="material" filename="plot_xz" id="2" type="slice">
+    <origin>0 0 212.5</origin>
+    <width>453 425</width>
+    <pixels>22650 21250</pixels>
+    <color id="1" rgb="255 255 0" />
+    <color id="2" rgb="255 192 203" />
+    <color id="3" rgb="255 165 0" />
+    <color id="4" rgb="0 0 255" />
+  </plot>
+</plots>

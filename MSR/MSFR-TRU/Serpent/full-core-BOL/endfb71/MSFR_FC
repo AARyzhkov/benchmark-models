@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          MSFR (TRU+Th232)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mat fuel sum tmp 973.15
+    Li-6.09c    1.0660E-06
+    Li-7.09c    2.1319E-02
+    F-19.09c    4.4309E-02
+    Th-232.09c  4.4203E-03
+    Np-237.09c  1.1150E-04
+    Pu-238.09c  4.7768E-05
+    Pu-239.09c  8.1205E-04
+    Pu-240.09c  3.8037E-04
+    Pu-241.09c  1.8930E-04
+    Pu-242.09c  1.1853E-04
+    Am-241.09c  6.0173E-05
+    Am-243.09c  3.3626E-05
+    Cm-244.09c  1.4146E-05
+    Cm-245.09c  1.7682E-06  
+
+mat fertile sum tmp 923.15
+    Li-6.09c    1.0759E-06
+    Li-7.09c    2.1517E-02
+    F-19.09c    4.6506E-02
+    Th-232.09c  6.2471E-03
+
+mat b4c sum tmp 973.15
+    B-10.09c    2.1773E-02
+    B-11.09c    8.8080E-02
+    C-nat.09c   2.7463E-02
+
+mat nicrw sum tmp 973.15
+    Ni-58.09c   4.6124E-02
+    Ni-60.09c   1.7767E-02
+    Ni-61.09c   7.7232E-04
+    Ni-62.09c   2.4625E-03
+    Ni-64.09c   6.2712E-04
+    W-180.09c   1.0211E-05
+    W-182.09c   2.2549E-03
+    W-183.09c   1.2177E-03
+    W-184.09c   2.6072E-03
+    W-186.09c   2.4192E-03
+    Cr-50.09c   2.9701E-04
+    Cr-52.09c   5.7276E-03
+    Cr-53.09c   6.4946E-04
+    Cr-54.09c   1.6166E-04
+    Mo-92.09c   9.1964E-05
+    Mo-94.09c   5.7675E-05
+    Mo-95.09c   9.9649E-05
+    Mo-96.09c   1.0467E-04
+    Mo-97.09c   6.0155E-05
+    Mo-98.09c   1.5250E-04
+    Mo-100.09c  6.1172E-05
+    Fe-54.09c   3.1509E-05
+    Fe-56.09c   4.9463E-04
+    Fe-57.09c   1.1423E-05
+    Fe-58.09c   1.5202E-06
+    Ti-46.09c   2.0759E-05
+    Ti-47.09c   1.8721E-05
+    Ti-48.09c   1.8550E-04
+    Ti-49.09c   1.3613E-05
+    Ti-50.09c   1.3034E-05
+    C-nat.09c   2.5077E-04
+    Mn-55.09c   2.1921E-04
+    Si-28.09c   1.9825E-04
+    Si-29.09c   1.0066E-05
+    Si-30.09c   6.6358E-06
+    Al-27.09c   4.4354E-05
+    B-10.09c    5.5789E-06
+    B-11.09c    2.2569E-05
+    P-31.09c    1.9618E-05
+    S-32.09c    3.2427E-06
+    S-33.09c    2.5544E-08
+    S-34.09c    1.4316E-07
+    S-36.09c    4.9745E-10
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+surf bot_plane         pz 0
+surf bot_refl_plane    pz 100
+surf bot_pump_plane    pz 118.75
+surf bot_blanket_plane pz 120.75
+surf top_blanket_plane pz 304.75
+surf top_pump_plane    pz 306.75
+surf top_refl_plane    pz 325.5
+surf top_plane         pz 425.5
+
+surf fuel_r       cyl 0. 0. 112.75
+surf inner_ni_r   cyl 0. 0. 114.75
+surf blanket_r    cyl 0. 0. 160.75
+surf outer_ni_r   cyl 0. 0. 162.75
+surf protection_r cyl 0. 0. 182.75
+surf pump_r       cyl 0. 0. 206.45
+surf core_r       cyl 0. 0. 226.45
+
+cell cblanket    0  fertile      inner_ni_r     -blanket_r           bot_blanket_plane  -top_blanket_plane
+cell cnickel     0  nicrw        fuel_r         -outer_ni_r          bot_pump_plane     -top_pump_plane      #(inner_ni_r -blanket_r       bot_blanket_plane -top_blanket_plane)
+cell cprotection 0  b4c          outer_ni_r     -protection_r        bot_pump_plane     -top_pump_plane
+cell cfuel       0  fuel        -pump_r          bot_refl_plane     -top_refl_plane                          #(fuel_r     -protection_r    bot_pump_plane    -top_pump_plane) 
+cell crefl       0  nicrw       -core_r          bot_plane          -top_plane                               #(-pump_r     bot_refl_plane -top_refl_plane)
+ 
+cell  outer1  0 outside   core_r     
+cell  outer2  0 outside  -core_r            -bot_plane
+cell  outer3  0 outside  -core_r  top_plane 
+ 
+set pop 100000 9500 500 1.0 10 1
+set bc 1
+set gcu -1
+set ures yes 
+
+plot 1 11600  6866   0   -350. 350.    0. 500.
+plot 2 11600  6866   0   -350. 350.    0. 500.
+plot 3 10000 10000 180   -400. 400. -400. 400.
+
+set acelib "/mnt/e/Codes/NuclearData/Serpent/endfb71/s2v0_endfb71.xsdata"

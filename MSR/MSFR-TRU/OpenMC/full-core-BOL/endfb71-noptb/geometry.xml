@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<geometry>
+  <cell id="1" material="2" region="16 17 2 -3 11 -12" universe="1" />
+  <cell id="2" material="4" region="16 17 1 -4 10 -13 ~(16 17 2 -3 11 -12)" universe="1" />
+  <cell id="3" material="3" region="16 17 4 -5 10 -13" universe="1" />
+  <cell id="4" material="1" region="16 17 -6 9 -14 ~(1 -5 10 -13)" universe="1" />
+  <cell id="5" material="4" region="16 17 -7 8 -15 ~(-6 9 -14)" universe="1" />
+  <surface coeffs="0.0 0.0 112.75" id="1" type="z-cylinder" />
+  <surface coeffs="0.0 0.0 114.75" id="2" type="z-cylinder" />
+  <surface coeffs="0.0 0.0 160.75" id="3" type="z-cylinder" />
+  <surface coeffs="0.0 0.0 162.75" id="4" type="z-cylinder" />
+  <surface coeffs="0.0 0.0 182.75" id="5" type="z-cylinder" />
+  <surface coeffs="0.0 0.0 206.45" id="6" type="z-cylinder" />
+  <surface boundary="vacuum" coeffs="0.0 0.0 226.45" id="7" type="z-cylinder" />
+  <surface boundary="vacuum" coeffs="0" id="8" type="z-plane" />
+  <surface coeffs="100" id="9" type="z-plane" />
+  <surface coeffs="118.75" id="10" type="z-plane" />
+  <surface coeffs="120.75" id="11" type="z-plane" />
+  <surface coeffs="304.75" id="12" type="z-plane" />
+  <surface coeffs="306.75" id="13" type="z-plane" />
+  <surface coeffs="325.5" id="14" type="z-plane" />
+  <surface boundary="vacuum" coeffs="425.5" id="15" type="z-plane" />
+  <surface boundary="reflective" coeffs="0.0" id="16" type="y-plane" />
+  <surface boundary="reflective" coeffs="1.7320508075688772 -1 0.0 0.0" id="17" type="plane" />
+</geometry>
