@@ -1,0 +1,571 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          SCWR-SP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mat uo2 sum tmp 1200
+    O-16.12c    4.6845E-02
+    O-17.12c    1.7761E-05
+    U-235.12c   4.7461E-05
+    U-238.12c   2.3384E-02
+
+mat mox_5 sum tmp 1200
+    O-16.12c    4.6831E-02
+    O-17.12c    1.7756E-05
+    U-235.12c   4.5090E-05
+    U-238.12c   2.2216E-02
+    Pu-238.12c  4.6864E-06
+    Pu-239.12c  5.9851E-04
+    Pu-240.12c  4.3916E-04
+    Pu-241.12c  7.5203E-05
+    Pu-242.12c  4.6087E-05
+
+mat mox_10 sum tmp 1200
+    O-16.12c    4.6817E-02
+    O-17.12c    1.7750E-05
+    U-235.12c   4.2718E-05
+    U-238.12c   2.1047E-02
+    Pu-238.12c  9.3731E-06
+    Pu-239.12c  1.1971E-03
+    Pu-240.12c  8.7836E-04
+    Pu-241.12c  1.5041E-04
+    Pu-242.12c  9.2179E-05
+
+mat mox_20 sum tmp 1200
+    O-16.12c    4.6788E-02
+    O-17.12c    1.7739E-05
+    U-235.12c   3.7975E-05
+    U-238.12c   1.8710E-02
+    Pu-238.12c  1.8748E-05
+    Pu-239.12c  2.3943E-03
+    Pu-240.12c  1.7569E-03
+    Pu-241.12c  3.0085E-04
+    Pu-242.12c  1.8437E-04
+
+mat mox_32 sum tmp 1200
+    O-16.12c    4.6755E-02
+    O-17.12c    1.7727E-05
+    U-235.12c   3.2282E-05
+    U-238.12c   1.5905E-02
+    Pu-238.12c  2.9999E-05
+    Pu-239.12c  3.8313E-03
+    Pu-240.12c  2.8113E-03
+    Pu-241.12c  4.8141E-04
+    Pu-242.12c  2.9502E-04
+
+mat mox_34 sum tmp 1200
+    O-16.12c    4.6749E-02
+    O-17.12c    1.7725E-05
+    U-235.12c   3.1333E-05
+    U-238.12c   1.5438E-02
+    Pu-238.12c  3.1875E-05
+    Pu-239.12c  4.0708E-03
+    Pu-240.12c  2.9870E-03
+    Pu-241.12c  5.1150E-04
+    Pu-242.12c  3.1347E-04
+
+mat zrh sum tmp 663.15
+    H-1.06c    6.1964E-02
+    H-2.06c    9.6518E-06
+    Zr-90.06c  1.8756E-02
+    Zr-91.06c  4.0903E-03
+    Zr-92.06c  6.2521E-03
+    Zr-94.06c  6.3359E-03
+    Zr-96.06c  1.0207E-03
+
+mat sus304 sum tmp 663.15
+    C-nat.06c    3.1889E-04
+    Si-28.06c    9.8962E-04
+    Si-29.06c    5.0250E-05
+    Si-30.06c    3.3125E-05
+    P-31.06c     4.3240E-05
+    S-32.06c     1.4178E-05
+    S-33.06c     1.1169E-07
+    S-34.06c     6.2596E-07
+    S-36.06c     2.1750E-09
+    Cr-50.06c    6.5075E-04
+    Cr-52.06c    1.2549E-02
+    Cr-53.06c    1.4230E-03
+    Cr-54.06c    3.5421E-04
+    Mn-55.06c    1.4801E-03
+    Fe-54.06c    3.2732E-03
+    Fe-56.06c    5.1382E-02
+    Fe-57.06c    1.1866E-03
+    Fe-58.06c    1.5792E-04
+    Ni-58.06c    7.2938E-03
+    Ni-60.06c    2.8095E-03
+    Ni-61.06c    1.2213E-04
+    Ni-62.06c    3.8940E-04
+    Ni-64.06c    9.9169E-05
+    Mo-92.06c    1.6068E-04
+    Mo-94.06c    1.0077E-04
+    Mo-95.06c    1.7411E-04
+    Mo-96.06c    1.8289E-04
+    Mo-97.06c    1.0510E-04
+    Mo-98.06c    2.6646E-04
+    Mo-100.06c   1.0688E-04
+  
+mat water1 sum tmp 597.11 moder h2o_1 1001
+    H-1.06c   4.6461E-02
+    H-2.06c   7.2370E-06
+    O-16.06c  2.3225E-02
+    O-17.06c  8.8058E-06
+
+mat water2 sum tmp 653.30 moder h2o_2 1001
+    H-1.06c   3.0007E-02
+    H-2.06c   4.6740E-06
+    O-16.06c  1.5000E-02
+    O-17.06c  5.6872E-06
+
+mat water3 sum tmp 662.89 moder h2o_3 1001
+    H-1.06c   1.4549E-02
+    H-2.06c   2.2662E-06
+    O-16.06c  7.2728E-03
+    O-17.06c  2.7574E-06
+
+mat water4 sum tmp 688.44 moder h2o_4 1001
+    H-1.06c   9.2000E-03
+    H-2.06c   1.4330E-06
+    O-16.06c  4.5990E-03
+    O-17.06c  1.7437E-06
+
+mat water5 sum tmp 726.42 moder h2o_5 1001
+    H-1.06c   7.1741E-03
+    H-2.06c   1.1175E-06
+    O-16.06c  3.5863E-03
+    O-17.06c  1.3597E-06
+
+mat water6 sum tmp 759.33 moder h2o_6 1001
+    H-1.06c   6.2782E-03
+    H-2.06c   9.7792E-07
+    O-16.06c  3.1384E-03
+    O-17.06c  1.1899E-06
+
+mat water7 sum tmp 773.15 moder h2o_7 1001
+    H-1.06c   6.0041E-03
+    H-2.06c   9.3522E-07
+    O-16.06c  3.0014E-03
+    O-17.06c  1.1379E-06
+
+mat natural_absorber sum tmp 663.15
+    C-nat.06c   2.7000E-02
+    B-10.06c    2.3200E-02
+    B-11.06c    8.4900E-02
+
+mat helium sum tmp 663.15
+    He-3.06c 4.9200E-11
+    He-4.06c 2.4600E-05
+
+mat refl sum tmp 663.15 moder h2o_r 1001
+    H-1.06c    	5.0193E-03
+    H-2.06c    	7.8183E-07
+    C-nat.06c   2.0887E-04
+    O-16.06c   	2.5091E-03
+    O-17.06c   	9.5131E-07
+    Si-28.06c  	6.4820E-04
+    Si-29.06c  	3.2914E-05
+    Si-30.06c  	2.1697E-05
+    P-31.06c   	2.8322E-05
+    S-32.06c   	9.2867E-06
+    S-33.06c   	7.3157E-08
+    S-34.06c   	4.1000E-07
+    S-36.06c   	1.4247E-09
+    Cr-50.06c  	4.2624E-04
+    Cr-52.06c  	8.2196E-03
+    Cr-53.06c  	9.3204E-04
+    Cr-54.06c  	2.3200E-04
+    Mn-55.06c  	9.6947E-04
+    Fe-54.06c  	2.1439E-03
+    Fe-56.06c  	3.3655E-02
+    Fe-57.06c  	7.7725E-04
+    Fe-58.06c  	1.0344E-04
+    Ni-58.06c  	4.7774E-03
+    Ni-60.06c  	1.8403E-03
+    Ni-61.06c  	7.9994E-05
+    Ni-62.06c  	2.5506E-04
+    Ni-64.06c  	6.4956E-05
+    Mo-92.06c  	1.0525E-04
+    Mo-94.06c  	6.6006E-05
+    Mo-95.06c  	1.1404E-04
+    Mo-96.06c  	1.1979E-04
+    Mo-97.06c  	6.8844E-05
+    Mo-98.06c  	1.7453E-04
+    Mo-100.06c 	7.0008E-05
+
+mat refl_in sum tmp 553.15 moder h2o_in 1001
+    H-1.06c    	1.7923E-02
+    H-2.06c    	2.7918E-06
+    C-nat.06c 	2.0887E-04
+    O-16.06c   	8.9595E-03
+    O-17.06c   	3.3969E-06
+    Si-28.06c  	6.4820E-04
+    Si-29.06c  	3.2914E-05
+    Si-30.06c  	2.1697E-05
+    P-31.06c   	2.8322E-05
+    S-32.06c   	9.2867E-06
+    S-33.06c   	7.3157E-08
+    S-34.06c   	4.1000E-07
+    S-36.06c   	1.4247E-09
+    Cr-50.06c  	4.2624E-04
+    Cr-52.06c  	8.2196E-03
+    Cr-53.06c  	9.3204E-04
+    Cr-54.06c  	2.3200E-04
+    Mn-55.06c  	9.6947E-04
+    Fe-54.06c  	2.1439E-03
+    Fe-56.06c  	3.3655E-02
+    Fe-57.06c  	7.7725E-04
+    Fe-58.06c  	1.0344E-04
+    Ni-58.06c  	4.7774E-03
+    Ni-60.06c  	1.8403E-03
+    Ni-61.06c  	7.9994E-05
+    Ni-62.06c  	2.5506E-04
+    Ni-64.06c  	6.4956E-05
+    Mo-92.06c  	1.0525E-04
+    Mo-94.06c  	6.6006E-05
+    Mo-95.06c  	1.1404E-04
+    Mo-96.06c  	1.1979E-04
+    Mo-97.06c  	6.8844E-05
+    Mo-98.06c  	1.7453E-04
+    Mo-100.06c 	7.0008E-05
+
+mat refl_out sum tmp 773.15 moder h2o_7 1001
+    H-1.06c    	2.0714E-03
+    H-2.06c    	3.2265E-07
+    C-nat.06c 	2.0887E-04
+    O-16.06c   	1.0355E-03
+    O-17.06c   	3.9259E-07
+    Si-28.06c  	6.4820E-04
+    Si-29.06c  	3.2914E-05
+    Si-30.06c  	2.1697E-05
+    P-31.06c   	2.8322E-05
+    S-32.06c   	9.2867E-06
+    S-33.06c   	7.3157E-08
+    S-34.06c   	4.1000E-07
+    S-36.06c   	1.4247E-09
+    Cr-50.06c  	4.2624E-04
+    Cr-52.06c  	8.2196E-03
+    Cr-53.06c  	9.3204E-04
+    Cr-54.06c  	2.3200E-04
+    Mn-55.06c  	9.6947E-04
+    Fe-54.06c  	2.1439E-03
+    Fe-56.06c  	3.3655E-02
+    Fe-57.06c  	7.7725E-04
+    Fe-58.06c  	1.0344E-04
+    Ni-58.06c  	4.7774E-03
+    Ni-60.06c  	1.8403E-03
+    Ni-61.06c  	7.9994E-05
+    Ni-62.06c  	2.5506E-04
+    Ni-64.06c  	6.4956E-05
+    Mo-92.06c  	1.0525E-04
+    Mo-94.06c  	6.6006E-05
+    Mo-95.06c  	1.1404E-04
+    Mo-96.06c  	1.1979E-04
+    Mo-97.06c  	6.8844E-05
+    Mo-98.06c  	1.7453E-04
+    Mo-100.06c 	7.0008E-05
+
+therm h2o_in  553.15   lwe7.10t lwe7.12t
+therm h2o_1   597.11   lwe7.10t lwe7.12t
+therm h2o_2   653.30   lwe7.14t lwe7.18t
+therm h2o_3   662.89   lwe7.14t lwe7.18t
+therm h2o_4   688.44   lwe7.14t lwe7.18t
+therm h2o_5   726.42   lwe7.14t lwe7.18t
+therm h2o_6   759.33   lwe7.14t lwe7.18t
+therm h2o_7   773.15   lwe7.14t lwe7.18t
+therm h2o_r   663.15   lwe7.14t lwe7.18t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% base planes
+surf s_20 pz  -20
+surf   s0 pz    0
+surf  s60 pz   60
+surf  s80 pz   80
+surf s240 pz  240
+surf s280 pz  280
+surf s300 pz  300
+
+% water plane
+surf  s40 pz  40
+% surf  s80 pz  80
+surf s120 pz 120
+surf s160 pz 160
+surf s200 pz 200
+%surf s240 pz 240
+
+
+surf sID hexxc 0. 0. 10.5313
+surf sOD hexxc 0. 0. 10.8313
+surf sFA hexxc 0. 0. 10.88
+surf sC  hexyc 0. 0. 150
+
+surf sG   cyl   0.       0.      0.790
+surf sG1  cyl   5.66814  0.      0.790
+surf sG2  cyl   2.83407  4.90875 0.790
+surf sG3  cyl   2.83406 -4.90875 0.790
+surf sG4  cyl  -2.83406  4.90875 0.790
+surf sG5  cyl  -2.83406 -4.90875 0.790
+surf sG6  cyl  -5.66814  0.      0.790
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Pincells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+cell cW1 water water1       -s40
+cell cW2 water water2  s40  -s80
+cell cW3 water water3  s80 -s120
+cell cW4 water water4 s120 -s160
+cell cW5 water water5 s160 -s200
+cell cW6 water water6 s200 -s240
+cell cW7 water water7 s240
+
+pin pMOX_5
+    mox_5   0.228
+    helium  0.235
+    sus304  0.275
+    fill water   
+
+pin pMOX_20
+    mox_20  0.228
+    helium  0.235
+    sus304  0.275
+    fill water  
+
+pin pMOX_32
+    mox_32  0.228
+    helium  0.235
+    sus304  0.275
+    fill water  
+
+pin pMOX_34
+    mox_34  0.228
+    helium  0.235
+    sus304  0.275
+    fill water  
+
+pin pMOX_10
+    mox_10  0.228
+    helium  0.235
+    sus304  0.275
+    fill water  
+
+pin pUO2
+    uo2     0.228
+    helium  0.235
+    sus304  0.275
+    fill water  
+
+pin s
+    sus304 0.325
+    fill water  
+
+pin pZrH
+    zrh 0.325
+    fill water  
+
+pin pPlenum
+    helium  0.235
+    sus304  0.275
+    fill water  
+
+pin pGuide
+    fill water 0.690
+    sus304     
+
+pin c
+    fill water
+
+pin R
+    refl
+pin V
+    void
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               FAs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+cell c5mox    f fill pMOX_5          -s240
+cell c5Plen   f fill pPlenum    s240
+
+cell c20mox   o fill pMOX_20          -s240
+cell c20Plen  o fill pPlenum    s240
+
+cell c32mox  i fill pMOX_32           -s80
+cell c34mox  i fill pMOX_34     s80  -s240
+cell c34Plen i fill pPlenum    s240
+
+cell cUO2    b fill pMOX_10           -s60
+cell c10mox  b fill pUO2        s60  -s240
+cell c10Plen b fill pPlenum    s240
+
+cell cZrH    z fill s         -s60
+cell cZrHSS  z fill pZrH   s60  
+
+lat SL 3 0 0 39 39 0.6545
+    c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
+     c c c c c c c c c c c c c c c c c c c f f o o o o o o o o o o o o o o o f f c
+      c c c c c c c c c c c c c c c c c c f i i i i i i i i i i i i i i i i i i f c
+       c c c c c c c c c c c c c c c c c o i i i i i i i i i i i i i i i i i i i o c
+        c c c c c c c c c c c c c c c c o i i i i i i i i i i i i i i i i i i i i o c
+         c c c c c c c c c c c c c c c o i i i i i i i i i i i i i i i i i i i i i o c
+          c c c c c c c c c c c c c c o i i i i i i i i i i i i i i i i i i i i i i o c
+           c c c c c c c c c c c c c o i i i i i i i i i i i i i i i i i i i i i i i o c
+            c c c c c c c c c c c c o i i i i i i i i i i i c c i i i i i i i i i i i o c
+             c c c c c c c c c c c o i i i i i i i i i i i c c c i i i i i i i i i i i o c
+              c c c c c c c c c c o i i i i i i i i i i i i c c i i i i i i i i i i i i o c
+               c c c c c c c c c o i i i i i i i i i i i i i i i i i i i i i i i i i i i o c
+                c c c c c c c c o i i i i i i i i i i i i i i i i i i i i i i i i i i i i o c
+                 c c c c c c c o i i i i i i c c i i i i i i i i i i i i i c c i i i i i i o c
+                  c c c c c c o i i i i i i c c c i i i i i i i i i i i i c c c i i i i i i o c
+                   c c c c c o i i i i i i i c c i i i i i i i i i i i i i c c i i i i i i i o c
+                    c c c c o i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i o c
+                     c c c o i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i o c
+                      c c f i i i i i i i i i i i i i i i i c c i i i i i i i i i i i i i i i i f c
+                       c f i i i i i i i i i i i i i i i i c c c i i i i i i i i i i i i i i i i f c
+                        c f i i i i i i i i i i i i i i i i c c i i i i i i i i i i i i i i i i f c c
+                         c o i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i o c c c
+                          c o i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i o c c c c
+                           c o i i i i i i i c c i i i i i i i i i i i i i c c i i i i i i i o c c c c c
+                            c o i i i i i i c c c i i i i i i i i i i i i c c c i i i i i i o c c c c c c
+                             c o i i i i i i c c i i i i i i i i i i i i i c c i i i i i i o c c c c c c c
+                              c o i i i i i i i i i i i i i i i i i i i i i i i i i i i i o c c c c c c c c
+                               c o i i i i i i i i i i i i i i i i i i i i i i i i i i i o c c c c c c c c c
+                                c o i i i i i i i i i i i i c c i i i i i i i i i i i i o c c c c c c c c c c
+                                 c o i i i i i i i i i i i c c c i i i i i i i i i i i o c c c c c c c c c c c
+                                  c o i i i i i i i i i i i c c i i i i i i i i i i i o c c c c c c c c c c c c
+                                   c o i i i i i i i i i i i i i i i i i i i i i i i o c c c c c c c c c c c c c
+                                    c o i i i i i i i i i i i i i i i i i i i i i i o c c c c c c c c c c c c c c
+                                     c o i i i i i i i i i i i i i i i i i i i i i o c c c c c c c c c c c c c c c
+                                      c o i i i i i i i i i i i i i i i i i i i i o c c c c c c c c c c c c c c c c
+                                       c o i i i i i i i i i i i i i i i i i i i o c c c c c c c c c c c c c c c c c
+                                        c f i i i i i i i i i i i i i i i i i i f c c c c c c c c c c c c c c c c c c
+                                         c f f o o o o o o o o o o o o o o o f f c c c c c c c c c c c c c c c c c c c
+                                          c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
+
+lat OL 3 0 0 39 39 0.6545
+    c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
+     c c c c c c c c c c c c c c c c c c c s s s s s s s s s s s s s s s s s s s c
+      c c c c c c c c c c c c c c c c c c s s s s s s s s s s s s s s s s s s s s c
+       c c c c c c c c c c c c c c c c c s s z z z z z z z z z z z z z z z z z s s c
+        c c c c c c c c c c c c c c c c s s z z z z z z z z z z z z z z z z z z s s c
+         c c c c c c c c c c c c c c c s s z z z z z z z z z z z z z z z z z z z s s c
+          c c c c c c c c c c c c c c s s z z z b b b b b b b b b b b b b b z z z s s c
+           c c c c c c c c c c c c c s s z z z b b b b b b b b b b b b b b b z z z s s c
+            c c c c c c c c c c c c s s z z z b b b b b b b b b b b b b b b b z z z s s c
+             c c c c c c c c c c c s s z z z b b b b b b b b b b b b b b b b b z z z s s c
+              c c c c c c c c c c s s z z z b b b b b b b b b b b b b b b b b b z z z s s c
+               c c c c c c c c c s s z z z b b b b b b b b b b b b b b b b b b b z z z s s c
+                c c c c c c c c s s z z z b b b b b b b b b b b b b b b b b b b b z z z s s c
+                 c c c c c c c s s z z z b b b b b b b b b b b b b b b b b b b b b z z z s s c
+                  c c c c c c s s z z z b b b b b b b b b b b b b b b b b b b b b b z z z s s c
+                   c c c c c s s z z z b b b b b b b b b b b b b b b b b b b b b b b z z z s s c
+                    c c c c s s z z z b b b b b b b b b b b b b b b b b b b b b b b b z z z s s c
+                     c c c s s z z z b b b b b b b b b b b b b b b b b b b b b b b b b z z z s s c
+                      c c s s z z z b b b b b b b b b b b b b b b b b b b b b b b b b b z z z s s c
+                       c s s z z z b b b b b b b b b b b b b b b b b b b b b b b b b b b z z z s s c
+                        c s s z z z b b b b b b b b b b b b b b b b b b b b b b b b b b z z z s s c c
+                         c s s z z z b b b b b b b b b b b b b b b b b b b b b b b b b z z z s s c c c
+                          c s s z z z b b b b b b b b b b b b b b b b b b b b b b b b z z z s s c c c c
+                           c s s z z z b b b b b b b b b b b b b b b b b b b b b b b z z z s s c c c c c
+                            c s s z z z b b b b b b b b b b b b b b b b b b b b b b z z z s s c c c c c c
+                             c s s z z z b b b b b b b b b b b b b b b b b b b b b z z z s s c c c c c c c
+                              c s s z z z b b b b b b b b b b b b b b b b b b b b z z z s s c c c c c c c c
+                               c s s z z z b b b b b b b b b b b b b b b b b b b z z z s s c c c c c c c c c
+                                c s s z z z b b b b b b b b b b b b b b b b b b z z z s s c c c c c c c c c c
+                                 c s s z z z b b b b b b b b b b b b b b b b b z z z s s c c c c c c c c c c c
+                                  c s s z z z b b b b b b b b b b b b b b b b z z z s s c c c c c c c c c c c c
+                                   c s s z z z b b b b b b b b b b b b b b b z z z s s c c c c c c c c c c c c c
+                                    c s s z z z b b b b b b b b b b b b b b z z z s s c c c c c c c c c c c c c c
+                                     c s s z z z z z z z z z z z z z z z z z z z s s c c c c c c c c c c c c c c c
+                                      c s s z z z z z z z z z z z z z z z z z z s s c c c c c c c c c c c c c c c c
+                                       c s s z z z z z z z z z z z z z z z z z s s c c c c c c c c c c c c c c c c c
+                                        c s s s s s s s s s s s s s s s s s s s s c c c c c c c c c c c c c c c c c c
+                                         c s s s s s s s s s s s s s s s s s s s c c c c c c c c c c c c c c c c c c c
+                                          c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
+
+cell guide_1           G1 fill pGuide
+trans u G1  5.66814  0.      0.
+
+cell guide_2           G2 fill pGuide
+trans u G2  2.83407  4.90875 0.
+
+cell guide_3           G3 fill pGuide
+trans u G3  2.83406 -4.90875 0.
+
+cell guide_4           G4 fill pGuide
+trans u G4 -2.83406  4.90875 0.
+
+cell guide_5           G5 fill pGuide
+trans u G5 -2.83406 -4.90875 0.
+
+cell guide_6           G6 fill pGuide
+trans u G6 -5.66814  0.      0.
+
+
+cell  seed_bot          S  refl_in                    -s0
+cell  seed_assembly     S  fill SL        -sID   s0 -s280  sG sG1 sG2 sG3 sG4 sG5 sG6
+cell  seed_duct         S  sus304     sID -sOD   s0 -s280 
+cell  seed_sodium       S  fill water sOD        s0 -s280 
+cell  seed_guide_0      S  fill pGuide           s0 -s280 -sG 
+cell  seed_guide_1      S  fill G1               s0 -s280 -sG1
+cell  seed_guide_2      S  fill G2               s0 -s280 -sG2 
+cell  seed_guide_3      S  fill G3               s0 -s280 -sG3 
+cell  seed_guide_4      S  fill G4               s0 -s280 -sG4 
+cell  seed_guide_5      S  fill G5               s0 -s280 -sG5 
+cell  seed_guide_6      S  fill G6               s0 -s280 -sG6 
+cell  seed_top          S  refl_out            s280
+
+cell  blanket_bot       B  refl_in                    -s0
+cell  blanket_assembly  B  fill OL        -sID   s0 -s280
+cell  blanket_duct      B  sus304     sID -sOD   s0 -s280
+cell  blanket_sodium    B  fill water sOD        s0 -s280
+cell  blanket_top       B  refl_out            s280
+
+
+lat C 2 0 0 17 17 21.76
+    V V V V V V V V V V V V V V V V V
+     V V V V V V V V V R R R R R V V V
+      V V V V V V V V R S S S S R R R V
+       V V V V V V R R S S B B S S S R V
+        V V V V V R S S S B S S S S S R V
+         V V V V R S B S B S B B B B S R V
+          V V V R S B S B S B S S S B S R V
+           V V R S S B S B S S B B S S R V V
+            V V R S S B S S B S S B S S R V V
+             V V R S S B B S S B S B S S R V V
+              V R S B S S S B S B S B S R V V V
+               V R S B B B B S B S B S R V V V V
+                V R S S S S S B S S S R V V V V V
+                 V R S S S B B S S R R V V V V V V
+                  V R R R S S S S R V V V V V V V V
+                   V V V R R R R R V V V V V V V V V
+                    V V V V V V V V V V V V V V V V V
+
+
+cell  core    0 fill C   -sC  s_20 -s300    
+cell  outer1  0 outside   sC     
+cell  outer2  0 outside  -sC  -s_20
+cell  outer3  0 outside  -sC  s300
+
+set pop 100000 9500 500 1.0 10 1
+set bc 1
+set gcu -1
+set ures no
+
+plot 1 20000 20000   0   -150. 150.  -20. 300
+plot 2 20000 20000   0   -150. 150.  -20. 300
+plot 3 20000 20000  30   -150. 150. -150. 150.
+plot 3 20000 20000 200   -150. 150. -150. 150.
+
+set acelib "/mnt/e/Codes/NuclearData/Serpent/endfb71/s2v0_endfb71.xsdata"
+
+
