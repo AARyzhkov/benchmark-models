@@ -1,0 +1,723 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          ALFRED
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mat fueli sum tmp 1473     
+    Am-241.12c	6.4786e-05
+    U-234.12c	5.5962e-07
+    U-235.12c	7.5067e-05
+    U-236.12c	1.8499e-06
+    U-238.12c	1.8262e-02
+    Pu-238.12c	1.1698e-04     
+    Pu-239.12c	2.8413e-03
+    Pu-240.12c	1.3433e-03
+    Pu-241.12c	3.0251e-04
+    Pu-242.12c	3.7955e-04
+    O-16.12c	4.6204e-02
+
+mat fuelo sum  tmp 1473
+    Am-241.12c	 8.3188e-05 
+    U-234.12c	 5.1726e-07 
+    U-235.12c	 6.9363e-05 
+    U-236.12c	 1.7093e-06 
+    U-238.12c	 1.6884e-02 
+    Pu-238.12c	 1.5024e-04 
+    Pu-239.12c	 3.6489e-03 
+    Pu-240.12c	 1.7247e-03 
+    Pu-241.12c	 3.8844e-04 
+    Pu-242.12c	 4.8749e-04 
+    O-16.12c	 4.6341e-02 
+
+mat safe sum tmp 673  
+    B-10.06c         9.0915e-02
+    B-11.06c         1.0102e-02
+    C-12.06c         2.5254e-02
+
+mat Ti1515 sum tmp 673 
+    C-nat.06c	3.5874e-04
+    Cr-50.06c	5.8098e-04
+    Cr-52.06c	1.1187e-02
+    Cr-53.06c	1.2680e-03
+    Cr-54.06c	3.1532e-04
+    Ni-58.06c	8.6075e-03
+    Ni-60.06c	3.3160e-03
+    Ni-61.06c	1.4371e-04
+    Ni-62.06c	4.5894e-04
+    Ni-64.06c	1.1724e-04
+    Mn-55.06c	1.3072e-03
+    Mo-92.06c	1.1596e-04
+    Mo-94.06c	7.0739e-05
+    Mo-95.06c	1.2046e-04
+    Mo-96.06c	1.2490e-04
+    Mo-97.06c	7.0772e-05
+    Mo-98.06c	1.7699e-04
+    Mo-100.06c	6.9221e-05
+    Ti-46.06c	3.4381e-05
+    Ti-47.06c	3.0346e-05
+    Ti-48.06c	2.9444e-04
+    Ti-49.06c	2.1166e-05
+    Ti-50.06c	1.9862e-05
+    Si-28.06c	1.3363e-03
+    Si-29.06c	6.7833e-05
+    Si-30.06c	4.4803e-05
+    B-10.06c    5.7090e-06
+    B-11.06c    2.0900e-05
+    P-31.06c	6.9556e-05
+    N-14.06c	5.1096e-05
+    N-15.06c	1.7618e-07
+    S-32.06c	2.1323e-05
+    S-33.06c	1.6553e-07
+    S-34.06c	9.0698e-07
+    S-36.06c	3.9933e-09
+    13027.06c	2.6616e-05
+    Zr-90.06c   8.2194e-06
+    Zr-91.06c   1.7727e-06
+    Zr-92.06c   2.6802e-06
+    Zr-94.06c   2.6582e-06
+    Zr-96.06c   4.1932e-07
+    V-51.06c	2.8193e-05
+    W-182.06c	2.0944e-06
+    W-183.06c	1.1248e-06
+    W-184.06c	2.3952e-06
+    W-186.06c	2.1985e-06
+    Nb-93.06c	7.7297e-06
+    Ta-181.06c  3.9688e-06
+    Cu-63.06c   1.5787e-05
+    Cu-65.06c   6.8200e-06
+    Co-59.06c   2.4371e-05
+    Ca-40.06c   3.4843e-05
+    Ca-42.06c   2.2147e-07
+    Ca-43.06c   4.5136e-08
+    Ca-44.06c   6.8162e-07
+    Ca-48.06c   5.6010e-08
+    Fe-54.06c   3.2774e-03
+    Fe-56.06c   5.1407e-02
+    Fe-57.06c   1.1870e-03
+    Fe-58.06c   1.5662e-04
+
+mat fmst91  sum tmp 673 
+    C-nat.06c       3.8786e-04
+    Si-28.06c       7.6490e-04
+    Si-29.06c       3.8827e-05
+    Si-30.06c       2.5645e-05
+    V-51.06c        1.8289e-04
+    Cr-50.06c       3.5090e-04
+    Cr-52.06c       6.7565e-03
+    Cr-53.06c       7.6585e-04
+    Cr-54.06c       1.9044e-04
+    Mn-55.06c       5.0879e-04
+    Mo-92.06c       7.5223e-05
+    Mo-94.06c       4.5890e-05
+    Mo-95.06c       7.8147e-05
+    Mo-96.06c       8.1025e-05
+    Mo-97.06c       4.5911e-05
+    Mo-98.06c       1.1482e-04
+    Mo-100.06c      4.4905e-05
+    Ni-58.06c       1.0807e-04
+    Ni-60.06c       4.1634e-05
+    Ni-61.06c       1.8044e-06
+    Ni-62.06c       5.7624e-06
+    Ni-64.06c       1.4720e-06
+    Nb-93.06c       5.0144e-05
+    Fe-54.06c       4.3089e-03
+    Fe-56.06c       6.7586e-02
+    Fe-57.06c       1.5606e-03
+    Fe-58.06c       2.0592e-04
+
+mat lead sum tmp 673 
+    Pb-204.06c        4.5465e-04       
+    Pb-206.06c        7.7163e-03
+    Pb-207.06c        7.0759e-03
+    Pb-208.06c        1.6771e-02
+
+mat ZrYO sum tmp 673 
+    Zr-90.06c       1.7928e-02
+    Zr-91.06c       3.9533e-03
+    Zr-92.06c       6.1091e-03
+    Zr-94.06c       6.3259e-03
+    Zr-96.06c       1.0408e-03
+    O-16.06c        1.2944e-02
+    Y-89.06c        2.0211e-03
+
+mat foll sum  tmp 673 
+    Zr-90.06c       1.6979e-02
+    Zr-91.06c       3.7439e-03
+    Zr-92.06c       5.7855e-03
+    Zr-94.06c       5.9908e-03
+    Zr-96.06c       9.8570e-04
+    O-16.06c        1.2259e-02
+    Y-89.06c        1.9140e-03
+
+mat ins sum tmp 673 
+    Zr-90.06c       1.6790e-02  
+    Zr-91.06c       3.7023e-03  
+    Zr-92.06c       5.7212e-03  
+    Zr-94.06c       5.9242e-03  
+    Zr-96.06c       9.7474e-04  
+    O-16.06c        1.2122e-02  
+    Y-89.06c        1.8927e-03  
+
+mat spr  sum tmp 673
+    C-nat.06c	    3.0269e-05
+    Si-28.06c	    5.9694e-05
+    Si-29.06c	    3.0301e-06
+    Si-30.06c     	2.0014e-06
+    V-51.06c     	1.4273e-05
+    Cr-50.06c	    2.7384e-05
+    Cr-52.06c	    5.2729e-04
+    Cr-53.06c	    5.9768e-05
+    Cr-54.06c	    1.4863e-05
+    Mn-55.06c     	3.9707e-05
+    Mo-92.06c	    5.8705e-06
+    Mo-94.06c	    3.5813e-06
+    Mo-95.06c	    6.0987e-06
+    Mo-96.06c	    6.3233e-06
+    Mo-97.06c	    3.5829e-06
+    Mo-98.06c     	8.9606e-06
+    Mo-100.06c	    3.5044e-06
+    Ni-58.06c	    8.4342e-06
+    Ni-60.06c	    3.2492e-06
+    Ni-61.06c	    1.4082e-07
+    Ni-62.06c	    4.4970e-07
+    Ni-64.06c	    1.1488e-07
+    Nb-93.06c     	3.9133e-06
+    Fe-54.06c	    3.3627e-04
+    Fe-56.06c	    5.2745e-03
+    Fe-57.06c       1.2179e-04
+    Fe-58.06c       1.6070e-05
+
+mat pln  sum tmp 673
+    C-nat.06c	    3.0130e-05
+    Si-28.06c	    5.9419e-05
+    Si-29.06c	    3.0162e-06
+    Si-30.06c     	1.9922e-06
+    V-51.06c     	1.4208e-05
+    Cr-50.06c	    2.7258e-05
+    Cr-52.06c	    5.2486e-04
+    Cr-53.06c	    5.9492e-05
+    Cr-54.06c	    1.4794e-05
+    Mn-55.06c     	3.9524e-05
+    Mo-92.06c	    5.8434e-06
+    Mo-94.06c	    3.5648e-06
+    Mo-95.06c	    6.0706e-06
+    Mo-96.06c	    6.2942e-06
+    Mo-97.06c	    3.5664e-06
+    Mo-98.06c     	8.9193e-06
+    Mo-100.06c	    3.4883e-06
+    Ni-58.06c	    8.3953e-06
+    Ni-60.06c	    3.2342e-06
+    Ni-61.06c	    1.4017e-07
+    Ni-62.06c	    4.4763e-07
+    Ni-64.06c	    1.1435e-07
+    Nb-93.06c     	3.8953e-06
+    Fe-54.06c	    3.3472e-04
+    Fe-56.06c	    5.2502e-03
+    Fe-57.06c       1.2123e-04
+    Fe-58.06c       1.5996e-05
+
+mat tplg  sum tmp 673
+    Pb-204.06c      5.2888e-05
+    Pb-206.06c      8.8888e-04
+    Pb-207.06c      8.1117e-04
+    Pb-208.06c      1.9133e-03
+    C-nat.06c	    3.5841e-04
+    Si-28.06c     	7.0683e-04
+    Si-29.06c	    3.5879e-05
+    Si-30.06c	    2.3698e-05
+    V-51.06c	    1.6901e-04
+    Cr-50.06c	    3.2425e-04
+    Cr-52.06c	    6.2435e-03
+    Cr-53.06c	    7.0770e-04
+    Cr-54.06c	    1.7598e-04
+    Mn-55.06c	    4.7016e-04
+    Mo-92.06c	    6.9511e-05
+    Mo-94.06c	    4.2405e-05
+    Mo-95.06c	    7.2214e-05
+    Mo-96.06c	    7.4873e-05
+    Mo-97.06c     	4.2425e-05
+    Mo-98.06c	    1.0610e-04
+    Mo-100.06c	    4.1495e-05
+    Ni-58.06c	    9.9867e-05
+    Ni-60.06c	    3.8473e-05
+    Ni-61.06c	    1.6674e-06
+    Ni-62.06c	    5.3249e-06
+    Ni-64.06c     	1.3603e-06
+    Nb-93.06c	    4.6336e-05
+    Fe-54.06c	    3.9817e-03
+    Fe-56.06c	    6.2454e-02
+    Fe-57.06c       1.4421e-03
+    Fe-58.06c       1.9028e-04
+
+mat bplg  sum tmp 673
+    Pb-204.06c      3.4616e-05
+    Pb-206.06c      5.8178e-04
+    Pb-207.06c      5.3092e-04
+    Pb-208.06c      1.2523e-03
+    C-nat.06c	    3.7258e-04
+    Si-28.06c     	7.3476e-04
+    Si-29.06c	    3.7297e-05
+    Si-30.06c	    2.4634e-05
+    V-51.06c	    1.7569e-04
+    Cr-50.06c	    3.3707e-04
+    Cr-52.06c	    6.4903e-03
+    Cr-53.06c	    7.3566e-04
+    Cr-54.06c	    1.8294e-04
+    Mn-55.06c	    4.8874e-04
+    Mo-92.06c	    7.2258e-05
+    Mo-94.06c	    4.4081e-05
+    Mo-95.06c	    7.5067e-05
+    Mo-96.06c	    7.7832e-05
+    Mo-97.06c     	4.4101e-05
+    Mo-98.06c	    1.1029e-04
+    Mo-100.06c	    4.3135e-05
+    Ni-58.06c	    1.0381e-04
+    Ni-60.06c	    3.9994e-05
+    Ni-61.06c	    1.7333e-06
+    Ni-62.06c	    5.5353e-06
+    Ni-64.06c     	1.4140e-06
+    Nb-93.06c	    4.8168e-05
+    Fe-54.06c	    4.1391e-03
+    Fe-56.06c	    6.4922e-02
+    Fe-57.06c       1.4991e-03
+    Fe-58.06c       1.9780e-04
+
+mat tref  sum tmp 673
+    Pb-204.06c      3.4894e-04
+    Pb-206.06c      5.8647e-03
+    Pb-207.06c      5.3520e-03
+    Pb-208.06c      1.2624e-02
+    C-nat.06c	    1.0433e-04
+    Si-28.06c     	2.0574e-04
+    Si-29.06c	    1.0444e-05
+    Si-30.06c	    6.8980e-06
+    V-51.06c	    4.9195e-05
+    Cr-50.06c	    9.4384e-05
+    Cr-52.06c	    1.8174e-03
+    Cr-53.06c	    2.0600e-04
+    Cr-54.06c	    5.1226e-05
+    Mn-55.06c	    1.3685e-04
+    Mo-92.06c	    2.0233e-05
+    Mo-94.06c	    1.2343e-05
+    Mo-95.06c	    2.1020e-05
+    Mo-96.06c	    2.1794e-05
+    Mo-97.06c     	1.2349e-05
+    Mo-98.06c	    3.0884e-05
+    Mo-100.06c	    1.2078e-05
+    Ni-58.06c	    2.9069e-05
+    Ni-60.06c	    1.1199e-05
+    Ni-61.06c	    4.8535e-07
+    Ni-62.06c	    1.5500e-06
+    Ni-64.06c     	3.9595e-07
+    Nb-93.06c	    1.3488e-05
+    Fe-54.06c	    1.1590e-03
+    Fe-56.06c	    1.8179e-02
+    Fe-57.06c       4.1977e-04
+    Fe-58.06c       5.5388e-05
+
+mat bref  sum tmp 673
+    Pb-204.06c      3.8384e-04 
+    Pb-206.06c      6.4512e-03 
+    Pb-207.06c      5.8872e-03 
+    Pb-208.06c      1.3886e-02 
+    C-nat.06c	    6.2596e-05 
+    Si-28.06c     	1.2345e-04 
+    Si-29.06c	    6.2662e-06 
+    Si-30.06c	    4.1388e-06 
+    V-51.06c	    2.9517e-05 
+    Cr-50.06c	    5.6630e-05 
+    Cr-52.06c	    1.0904e-03 
+    Cr-53.06c	    1.2360e-04 
+    Cr-54.06c	    3.0735e-05 
+    Mn-55.06c	    8.2113e-05 
+    Mo-92.06c	    1.2140e-05 
+    Mo-94.06c	    7.4060e-06 
+    Mo-95.06c	    1.2612e-05 
+    Mo-96.06c	    1.3076e-05 
+    Mo-97.06c     	7.4094e-06 
+    Mo-98.06c	    1.8530e-05 
+    Mo-100.06c	    7.2470e-06 
+    Ni-58.06c	    1.7442e-05 
+    Ni-60.06c	    6.7193e-06 
+    Ni-61.06c	    2.9121e-07 
+    Ni-62.06c	    9.2998e-07 
+    Ni-64.06c     	2.3757e-07 
+    Nb-93.06c	    8.0926e-06 
+    Fe-54.06c	    6.9540e-04 
+    Fe-56.06c	    1.0908e-02 
+    Fe-57.06c       2.5186e-04 
+    Fe-58.06c       3.3233e-05 
+
+mat barrel sum tmp 673
+    Pb-204.06c      2.7499e-04
+    Pb-206.06c      4.6217e-03
+    Pb-207.06c      4.2176e-03
+    Pb-208.06c      9.9482e-03
+    C-nat.06c       1.6791e-04
+    Si-28.06c       3.3113e-04
+    Si-29.06c       1.6808e-05
+    Si-30.06c       1.1102e-05
+    V-51.06c        7.9175e-05
+    Cr-50.06c       1.5190e-04
+    Cr-52.06c       2.9249e-03
+    Cr-53.06c       3.3154e-04
+    Cr-54.06c       8.2444e-05
+    Mn-55.06c       2.2026e-04
+    Mo-92.06c       3.2564e-05
+    Mo-94.06c       1.9866e-05
+    Mo-95.06c       3.3830e-05
+    Mo-96.06c       3.5076e-05
+    Mo-97.06c       1.9875e-05
+    Mo-98.06c       4.9705e-05
+    Mo-100.06c      1.9439e-05
+    Ni-58.06c       4.6785e-05
+    Ni-60.06c       1.8024e-05
+    Ni-61.06c       7.8114e-07
+    Ni-62.06c       2.4946e-06
+    Ni-64.06c       6.3726e-07
+    Nb-93.06c       2.1707e-05
+    Fe-54.06c       1.8653e-03
+    Fe-56.06c       2.9258e-02
+    Fe-57.06c       6.7559e-04
+    Fe-58.06c       8.9142e-05
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Pincells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pin pi			% Inner fuel pin
+    void    0.100
+    fueli   0.450
+    void    0.465
+    Ti1515  0.525
+    lead
+
+pin po			% Outer fuel pin
+    void    0.100
+    fuelo   0.450
+    void    0.465
+    Ti1515  0.525
+    lead
+
+pin pl			% Plenum pin
+    void    0.4
+    pln     0.465
+    Ti1515  0.525
+    lead
+
+pin tg		 % Top plug "pin"
+    tplg   0.465
+    Ti1515 0.525
+    lead
+
+pin bg		 % Bottom plug "pin"
+    bplg   0.465
+    Ti1515 0.525
+    lead
+
+pin in		 % Top insulator "pin"
+    ins    0.465
+    Ti1515 0.525
+    lead
+
+pin dp		 % Dummy "pin"
+    ZrYO   0.465
+    Ti1515 0.525
+    lead
+
+pin sp		 % Spring "pin"
+    spr    0.465
+    Ti1515 0.525
+    lead
+
+pin s1		 % Safety pin
+    safe   1.45
+    void   1.49
+    Ti1515 1.55
+    lead
+
+pin fp		 % Control pin follower 
+    foll   1.49
+    fmst91 1.55
+    lead
+
+pin l			
+    lead
+    
+pin L			
+    lead
+
+pin B		
+    barrel
+
+pin V			
+    void
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Fuel rod (FR)
+surf z_top      pz   170.0	      % Fuel pin upper limit
+surf z_tplg_fr  pz   48.0	      % Fuel pin upper limit
+surf z_sprn_fr  pz   43.0	      % Fuel pin upper limit
+surf z_ins_u    pz   31.0         % Insulator upper limit
+surf z_fuel_u   pz   30.0	      % Fuel active zone upper limit
+surf z_fuel_b   pz  -30.0         % Fuel active zone lower limit
+surf z_ins_b    pz  -31.0         % Insulator lower limit
+surf z_plen     pz  -86.0         % Plenum fuel pin lower limit
+surf z_bplg_fr  pz  -91.0         % Bottom plug
+surf z_bot      pz  -170.0        % Bottom reflector
+
+% Control rod (CR)
+surf z_sprn_cr  pz    94.0	      % Fuel pin upper limit
+surf z_frod_u   pz    34.0	      % Fuel pin upper limit
+surf z_frod_b   pz   -34.0 	      % Insulator upper limit
+surf z_crod_cr  pz  -102.0	      % Fuel active zone upper limit
+surf z_bins_cr  pz  -103.0        % Fuel active zone lower limit
+surf z_bplg_cr  pz  -108.0        % Bottom plug
+
+% Safety rod (SR)
+surf z_sprn_sr   pz   137.0	      % Fuel pin upper limit
+surf z_tins_sr   pz   127.0	      % Fuel pin upper limit
+surf z_srod_sr   pz   126.0 	  % Insulator upper limit
+surf z_bplg_sr   pz    42.0	      % Fuel active zone upper limit
+surf z_bref_sru  pz    37.0       % Upper reflector
+
+surf sID hexyc 0. 0.   7.9
+surf sOD hexyc 0. 0.   8.3
+surf sC  hexxc 0. 0. 190.0
+
+surf sSID1 cylz 0. 0. 7.35
+surf sSOD1 cylz 0. 0. 8.35
+
+surf sSID2 cylz 0. 0. 8.05
+surf sSOD2 cylz 0. 0. 8.35
+
+cell cInnerPin0  i fill bg           -z_plen
+cell cInnerPin1  i fill pl z_plen    -z_ins_b
+cell cInnerPin2  i fill in z_ins_b   -z_fuel_b
+cell cInnerPin3  i fill pi z_fuel_b  -z_fuel_u
+cell cInnerPin4  i fill in z_fuel_u  -z_ins_u
+cell cInnerPin5  i fill sp z_ins_u   -z_sprn_fr
+cell cInnerPin6  i fill tg z_sprn_fr 
+
+cell cOuterPin0  o fill bg           -z_plen
+cell cOuterPin1  o fill pl z_plen    -z_ins_b
+cell cOuterPin2  o fill in z_ins_b   -z_fuel_b
+cell cOuterPin3  o fill po z_fuel_b  -z_fuel_u
+cell cOuterPin4  o fill in z_fuel_u  -z_ins_u
+cell cOuterPin5  o fill sp z_ins_u   -z_sprn_fr
+cell cOuterPin6  o fill tg z_sprn_fr 
+
+cell cReflPin0  r fill bg           -z_plen
+cell cReflPin1  r fill dp z_plen    -z_ins_u
+cell cReflPin2  r fill sp z_ins_u   -z_sprn_fr
+cell cReflPin3  r fill tg z_sprn_fr 
+
+cell cCRPin0  c fill sp            -z_bins_cr
+cell cCRPin1  c fill in  z_bins_cr -z_crod_cr
+cell cCRPin2  c lead     z_crod_cr -z_frod_u
+cell cCRPin3  c fill sp  z_frod_u 
+
+cell cSRPin0  s fill bg            -z_bplg_sr
+cell cSRPin1  s lead     z_bplg_sr -z_srod_sr
+cell cSRPin2  s fill in  z_srod_sr -z_tins_sr
+cell cSRPin3  s fill sp  z_tins_sr  
+
+lat IL 2 0 0 15 15 1.386
+    l l l l l l l l l l l l l l l
+    l l l l l l l i i i i i i i l
+    l l l l l l i i i i i i i i l
+    l l l l l i i i i i i i i i l
+    l l l l i i i i i i i i i i l
+    l l l i i i i i i i i i i i l
+    l l i i i i i i i i i i i i l
+    l i i i i i i i i i i i i i l
+    l i i i i i i i i i i i i l l
+    l i i i i i i i i i i i l l l
+    l i i i i i i i i i i l l l l
+    l i i i i i i i i i l l l l l
+    l i i i i i i i i l l l l l l
+    l i i i i i i i l l l l l l l
+    l l l l l l l l l l l l l l l
+
+lat OL 2 0 0 15 15 1.386
+    l l l l l l l l l l l l l l l
+    l l l l l l l o o o o o o o l
+    l l l l l l o o o o o o o o l
+    l l l l l o o o o o o o o o l
+    l l l l o o o o o o o o o o l
+    l l l o o o o o o o o o o o l
+    l l o o o o o o o o o o o o l
+    l o o o o o o o o o o o o o l
+    l o o o o o o o o o o o o l l
+    l o o o o o o o o o o o l l l
+    l o o o o o o o o o o l l l l
+    l o o o o o o o o o l l l l l
+    l o o o o o o o o l l l l l l
+    l o o o o o o o l l l l l l l
+    l l l l l l l l l l l l l l l
+
+lat RL 2 0 0 15 15 1.386
+    l l l l l l l l l l l l l l l
+    l l l l l l l r r r r r r r l
+    l l l l l l r r r r r r r r l
+    l l l l l r r r r r r r r r l
+    l l l l r r r r r r r r r r l
+    l l l r r r r r r r r r r r l
+    l l r r r r r r r r r r r r l
+    l r r r r r r r r r r r r r l
+    l r r r r r r r r r r r r l l
+    l r r r r r r r r r r r l l l
+    l r r r r r r r r r r l l l l
+    l r r r r r r r r r l l l l l
+    l r r r r r r r r l l l l l l
+    l r r r r r r r l l l l l l l
+    l l l l l l l l l l l l l l l
+
+lat SL 2 0 0 15 15 1.386
+    l l l l l l l l l l l l l l l
+    l l l l l l l s s s s s s s l
+    l l l l l l s s s s s s s s l
+    l l l l l s s s s s s s s s l
+    l l l l s s s s s s s s s s l
+    l l l s s s s s s s s s s s l
+    l l s s s s s s s s s s s s l
+    l s s s s s s s s s s s s s l
+    l s s s s s s s s s s s s l l
+    l s s s s s s s s s s s l l l
+    l s s s s s s s s s s l l l l
+    l s s s s s s s s s l l l l l
+    l s s s s s s s s l l l l l l
+    l s s s s s s s l l l l l l l
+    l l l l l l l l l l l l l l l
+
+lat CL 2 0 0 15 15 1.386
+    l l l l l l l l l l l l l l l
+    l l l l l l l c c c c c c c l
+    l l l l l l c c c c c c c c l
+    l l l l l c c c c c c c c c l
+    l l l l c c c c c c c c c c l
+    l l l c c c c c c c c c c c l
+    l l c c c c c c c c c c c c l
+    l c c c c c c c c c c c c c l
+    l c c c c c c c c c c c c l l
+    l c c c c c c c c c c c l l l
+    l c c c c c c c c c c l l l l
+    l c c c c c c c c c l l l l l
+    l c c c c c c c c l l l l l l
+    l c c c c c c c l l l l l l l
+    l l l l l l l l l l l l l l l
+
+% -- Safety rod assembly (circular array)
+lat safe1 4 0.0 0.0 2 	  % Active section
+    3 2.0 0 s1 s1 s1
+     9 5.5 0 s1 s1 s1 s1 s1 s1 s1 s1 s1
+
+% -- Control rod assembly (circular array)
+lat cont1 4 0.0 0.0 3	  % Active section
+    1 0.0 0 s1
+     6 3.3 30 s1 s1 s1 s1 s1 s1
+      12 6.37511 15 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1
+
+lat continact 4 0.0 0.0 3 % Inactive section
+    1 0.0 0 fp
+     6 3.3 30 fp fp fp fp fp fp
+      12 6.37511 15 fp fp fp fp fp fp fp fp fp fp fp fp
+
+cell  inner_bref      I  bref                             -z_bplg_fr
+cell  inner_assembly  I  fill IL        -sID    z_bplg_fr -z_tplg_fr  
+cell  inner_duct      I  fmst91     sID -sOD    z_bplg_fr -z_tplg_fr  
+cell  inner_lead      I  lead       sOD         z_bplg_fr -z_tplg_fr  
+cell  inner_tref      I  tref                   z_tplg_fr
+
+cell  outer_bref      O  bref                             -z_bplg_fr
+cell  outer_assembly  O  fill OL        -sID    z_bplg_fr -z_tplg_fr 
+cell  outer_duct      O  fmst91     sID -sOD    z_bplg_fr -z_tplg_fr 
+cell  outer_lead      O  lead       sOD         z_bplg_fr -z_tplg_fr 
+cell  outer_tref      O  tref                   z_tplg_fr
+
+cell  refl_bref      R  bref                              -z_bplg_fr
+cell  refl_assembly  R  fill RL         -sID    z_bplg_fr -z_tplg_fr
+cell  refl_duct      R  fmst91      sID -sOD    z_bplg_fr -z_tplg_fr
+cell  refl_lead      R  lead        sOD         z_bplg_fr -z_tplg_fr
+cell  refl_tref      R  tref                    z_tplg_fr
+
+cell  control_bref          P  bref                                      -z_bplg_cr
+cell  control_bot_assembly  P  fill CL               -sSID1    z_bplg_cr -z_crod_cr
+cell  control_abs           P  fill cont1            -sSID2    z_crod_cr -z_frod_b
+cell  control_dummy         P  fill continact        -sSID2    z_frod_b  -z_frod_u
+cell  control_top_assembly  P  fill CL               -sSID1    z_frod_u  -z_sprn_cr
+cell  control_thick_duct    P  fmst91          sSID1 -sSID2  ((z_frod_u  -z_sprn_cr) : (z_bplg_cr -z_crod_cr))
+cell  control_duct          P  fmst91          sSID2 -sSOD2    z_bplg_cr -z_sprn_cr
+cell  control_lead          P  lead            sSOD2           z_bplg_cr -z_sprn_cr
+cell  control_tref          P  tref                            z_sprn_cr
+
+cell  safety_bref          S  bref                                     -z_bref_sru
+cell  safety_bot_assembly  S  fill SL               -sSID1  z_bref_sru -z_bplg_sr
+cell  safety_abs           S  fill safe1            -sSID1  z_bplg_sr  -z_srod_sr
+cell  safety_top_assembly  S  fill SL               -sSID1  z_srod_sr  -z_sprn_sr
+cell  safety_duct          S  fmst91          sSID1 -sSOD1  z_bref_sru -z_sprn_sr
+cell  safety_lead          S  lead            sSOD1         z_bref_sru -z_sprn_sr
+cell  safety_tref          S  tref                          z_sprn_sr
+
+lat C 3 0 0 27 27 17.1
+V V V V V V V V V V V V V V V V V V V V V V V V V V V
+ V V V V V V V V V V V V V L L L L L L L L L L L L L V
+  V V V V V V V V V V V V L L L L B B B B B B L L L L V
+   V V V V V V V V V V V L L L B B R R R R R B B L L L V
+    V V V V V V V V V V L L B B R R R R R R R R B B L L V
+     V V V V V V V V V L B B R R R R O O O R R R R B B L V
+      V V V V V V V V L B R R R O O O O O O O O R R R B L V
+       V V V V V V V L B R R R O O O P O P O O O R R R B L V
+        V V V V V V L B R R O O O O O O O O O O O O R R B L V
+         V V V V V L B R R O O P O I I I I I O P O O R R B L V
+          V V V V L B R R O O O O I I I I I I O O O O R R B L V
+           V V V L L B R R O P O I I I S I I I O P O R R B L L V
+            V V L L B R R O O O I I I I I I I I O O O R R B L L V
+             V L L L B R O O O I I S I I I S I I O O O R B L L L V
+              V L L B R R O O O I I I I I I I I O O O R R B L L V V
+               V L L B R R O P O I I I S I I I O P O R R B L L V V V
+                V L B R R O O O O I I I I I I O O O O R R B L V V V V
+                 V L B R R O O P O I I I I I O P O O R R B L V V V V V
+                  V L B R R O O O O O O O O O O O O R R B L V V V V V V
+                   V L B R R R O O O P O P O O O R R R B L V V V V V V V
+                    V L B R R R O O O O O O O O R R R B L V V V V V V V V
+                     V L B B R R R R O O O R R R R B B L V V V V V V V V V
+                      V L L B B R R R R R R R R B B L L V V V V V V V V V V
+                       V L L L B B R R R R R B B L L L V V V V V V V V V V V
+                        V L L L L B B B B B B L L L L V V V V V V V V V V V V
+                         V L L L L L L L L L L L L L V V V V V V V V V V V V V
+                          V V V V V V V V V V V V V V V V V V V V V V V V V V V
+
+cell  core    0 fill C   -sC   z_bot -z_top  
+cell  outer1  0 outside   sC     
+cell  outer2  0 outside  -sC  -z_bot
+cell  outer3  0 outside  -sC          z_top
+
+set pop 100000 9500 500 1.0 10 1
+set bc 1
+set gcu -1
+set ures yes
+set his 
+
+plot 3 20000 20000  70        % Cut to see Safety Rod
+plot 3 20000 20000  0         % Cut to see Fuel Rod
+plot 3 20000 20000 -35        % Cut to see Plenum
+plot 3 20000 20000 -90        % Cut to see Plug
+plot 1 10000 10000 29.18505   % Cut to see z-y plane
+plot 2 10000 10000            % Cut to see z-y plane
+
+set acelib "/home/SHARED/Serpent/xsdata/endfb71/s2v0_endfb71.xsdata"
+
