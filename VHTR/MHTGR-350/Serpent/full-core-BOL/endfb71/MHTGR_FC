@@ -1,0 +1,347 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          GT-MHR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mat uco sum tmp 1200 moder graphite12 6000 
+    U-235.12c  3.6676E-03
+    U-238.12c  1.9742E-02
+    O-16.12c   3.5114E-02
+    C-nat.12c  1.1705E-02
+
+mat porous_carbon sum tmp 1200 moder graphite12 6000 
+    C-nat.12c 5.0138E-02
+
+mat pyc sum tmp 1200 moder graphite12 6000 
+    C-nat.12c 9.5262E-02
+
+mat sic sum tmp 1200
+    C-nat.12c 4.8061E-02
+    Si-28.12c 4.4327E-02
+    Si-29.12c 2.2508E-03
+    Si-30.12c 1.4837E-03
+
+mat nat_abs sum tmp 1200
+    B-10.12c   2.1341E-02
+    B-11.12c   8.6333E-02
+    C-nat.12c  2.6918E-02
+
+mat graphite sum tmp 1200 moder graphite12 6000 
+    C-nat.12c 9.2755E-02
+
+mat helium sum tmp 1200
+    He-4.12c  2.4600E-05
+
+mat h451 sum tmp 1200 moder graphite12 6000 
+    C-nat.12c 9.2755E-02
+
+mat h2020 sum tmp 1200 moder graphite12 6000 
+    C-nat.12c 8.9246E-02
+
+mat pgraphite sum tmp 1200 moder graphite12 6000 
+    C-nat.12c 4.7130E-02
+
+mat enriched_abs sum tmp 1200
+    B-10.12c   1.0307E-1
+    B-11.12c   1.0416E-2
+    C-nat.12c  2.8371E-2
+
+mat cr_mat sum tmp 1200 moder graphite12 6000 
+    B-10.12c   2.0858E-02
+    B-11.12c   2.1078E-03
+    C-nat.12c  4.3334E-02
+
+mat rsc_mat sum tmp 1200 moder graphite12 6000 
+    B-10.12c   4.3187E-03
+    B-11.12c   1.7471E-02
+    C-nat.12c  4.3040E-02
+
+therm graphite12 1200 gre7.22t gre7.22t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Pincells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+particle 1
+    uco           0.02125
+    porous_carbon 0.03125
+    pyc           0.03525
+    sic           0.03875
+    pyc           0.04275
+    graphite
+
+particle 2
+    nat_abs        0.0100
+    porous_carbon  0.0118
+    pyc            0.0141
+    pgraphite
+
+pin sr
+    helium 0.6350
+    h451
+
+pin cr
+    helium 0.7940
+    h451
+
+pin sp
+    helium 0.6350
+    h2020
+
+pin cp
+    helium 0.7940
+    h2020
+
+pin P
+    h2020
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+surf sbot     pz    0.000
+surf   sfperm pz   99.120
+surf   srperm pz  129.770
+surf   srbot  pz  198.250
+surf   s1     pz  277.549
+surf   s2     pz  356.848
+surf   s3     pz  436.147
+surf   s4     pz  515.446
+surf   s5     pz  594.745
+surf   s6     pz  674.044
+surf   s7     pz  753.343
+surf   s8     pz  832.642
+surf   s9     pz  911.941
+surf   srtop  pz  991.240
+surf   stop   pz 1110.180
+
+surf spbed inf
+cell cpbed pbs graphite -spbed
+pbed triso pbs "particles.inp"
+surf comp_r cyl 0.0 0.0 0.6225
+
+surf spabs inf
+cell cpabs apbs pgraphite -spabs
+pbed abstriso apbs "abs-particles.inp"
+surf abs_r cyl 0.0 0.0 0.5715
+
+surf gap_r cyl 0.0 0.0 0.6350
+
+surf sCR  cylz -9.75614  0.   5.0800
+surf sCO  cylz -9.75614  0.   4.7625
+surf sCR1 cylz -9.75614  0.   2.64
+surf sCR2 cylz -9.75614  0.   4.13
+
+surf sFA hexxc    0. 0.  18.0
+surf sR   cylz    0  0. 260.0
+surf sC   cylz    0. 0. 297.3
+
+cell cBP0  p h2020                  -sfperm
+cell cBP1  p h451            sfperm -srbot
+cell cBP2  p fill abstriso   srbot  -srtop -abs_r
+cell cBP21 p helium          srbot  -srtop  abs_r -gap_r
+cell cBP22 p h451            srbot  -srtop  gap_r
+cell cBP3  p h451            srtop 
+
+cell cFP0  f h2020               -sfperm
+cell cFP1  f h451         sfperm -srbot
+cell cFP2  f fill triso   srbot  -srtop -comp_r
+cell cFP21 f helium       srbot  -srtop  comp_r -gap_r
+cell cFP22 f h451         srbot  -srtop  gap_r
+cell cFP3  f h451         srtop 
+
+cell cG0 m h2020         -sfperm
+cell cG1 m h451   sfperm
+        
+cell cSC0 s fill sp         -sfperm
+cell cSC1 s fill sr  sfperm
+
+cell cLC0 c fill cp         -sfperm
+cell cLC1 c fill cr  sfperm
+
+lat IL 3 0 0 23 23 1.8796
+    m m m m m m m m m m m m m m m m m m m m m m m
+     m m m m m m m m m m m p f c f f c f f c f p m
+      m m m m m m m m m m f c f f c f f c f f c f m
+       m m m m m m m m m c f f c f f c f f c f f c m
+        m m m m m m m m f f c f f c f f c f f c f f m
+         m m m m m m m f c f f c f f c f f c f f c f m
+          m m m m m m c f f c f f c f f c f f c f f c m
+           m m m m m f f c f f c f f c f f c f f c f f m
+            m m m m f c f f c f f c f f c f f c f f c f m
+             m m m c f f c f f c f f s f f c f f c f f c m
+              m m f f c f f c f f s m m s f f c f f c f f m
+               m p c f f c f f c f m m m f c f f c f f c p m
+                m f f c f f c f f s m m s f f c f f c f f m m
+                 m c f f c f f c f f s f f c f f c f f c m m m
+                  m f c f f c f f c f f c f f c f f c f m m m m
+                   m f f c f f c f f c f f c f f c f f m m m m m
+                    m c f f c f f c f f c f f c f f c m m m m m m
+                     m f c f f c f f c f f c f f c f m m m m m m m
+                      m f f c f f c f f c f f c f f m m m m m m m m
+                       m c f f c f f c f f c f f c m m m m m m m m m
+                        m f c f f c f f c f f c f m m m m m m m m m m
+                         m p f c f f c f f c f p m m m m m m m m m m m
+                          m m m m m m m m m m m m m m m m m m m m m m m
+
+lat OL 3 0 0 23 23 1.8796
+    m m m m m m m m m m m m m m m m m m m m m m m
+     m m m m m m m m m m m p f c f f c f f c f p m
+      m m m m m m m m m m f c f f m m m m f f c f m
+       m m m m m m m m m c f f c m m m m m c f f c m
+        m m m m m m m m f f c f m m m m m m f c f f m
+         m m m m m m m f c f f m m m m m m m f f c f m
+          m m m m m m c f f c f m m m m m m f c f f c m
+           m m m m m f f c f f c m m m m m c f f c f f m
+            m m m m f c f f c f f m m m m f f c f f c f m
+             m m m c f f c f f c f f s f f c f f c f f c m
+              m m f f c f f c f f s m m s f f c f f c f f m
+               m p c f f c f f c f m m m f c f f c f f c p m
+                m f f c f f c f f s m m s f f c f f c f f m m
+                 m c f f c f f c f f s f f c f f c f f c m m m
+                  m f c f f c f f c f f c f f c f f c f m m m m
+                   m f f c f f c f f c f f c f f c f f m m m m m
+                    m c f f c f f c f f c f f c f f c m m m m m m
+                     m f c f f c f f c f f c f f c f m m m m m m m
+                      m f f c f f c f f c f f c f f m m m m m m m m
+                       m c f f c f f c f f c f f c m m m m m m m m m
+                        m f c f f c f f c f f c f m m m m m m m m m m
+                         m p f c f f c f f c f p m m m m m m m m m m m
+                          m m m m m m m m m m m m m m m m m m m m m m m
+
+
+cell  inner_assembly  I  fill IL       -sFA 
+cell  inner_coolant   I  helium    sFA 
+
+cell hole_cr   CR helium           -sCR1
+cell gr_cr     CR cr_mat     sCR1 
+
+cell hole_rsc   RSC helium           -sCR1
+cell gr_rsc     RSC rsc_mat     sCR1 
+
+cell  outer_channel   O  helium          -sCO  #(-sCR2   srtop)
+cell  outer_cr        O  fill RSC                 -sCR2   srtop
+cell  outer_assembly  O  fill OL   sCO   -sFA
+cell  outer_coolant   O  helium    sFA 
+
+cell  refl_assembly1  R  h2020   -sFA          -srperm
+cell  refl_assembly2  R  h451    -sFA  srperm 
+cell  refl_coolant    R  helium   sFA 
+
+cell  A_channel   A  helium   -sCO  #(-sCR2   srtop)
+cell  A_cr        A  fill RSC          -sCR2   srtop
+cell  A_assembly  A  fill OL   sCO   -sFA
+cell  A_coolant   A  helium    sFA 
+trans u A 0. 0. 0. 0. 0. -120
+
+cell  B_channel   B  helium   -sCO  #(-sCR2   srtop)
+cell  B_cr        B  fill RSC          -sCR2   srtop
+cell  B_assembly  B  fill OL   sCO   -sFA
+cell  B_coolant   B  helium    sFA 
+trans u B 0. 0. 0. 0. 0. -60
+
+cell  C_channel   C  helium   -sCO  #(-sCR2   srtop)
+cell  C_cr        C  fill RSC          -sCR2   srtop
+cell  C_assembly  C  fill OL   sCO   -sFA
+cell  C_coolant   C  helium    sFA 
+trans u C 0. 0. 0. 0. 0. 60
+
+cell  D_channel   D  helium   -sCO  #(-sCR2   srtop)
+cell  D_cr        D  fill RSC          -sCR2   srtop
+cell  D_assembly  D  fill OL   sCO   -sFA
+cell  D_coolant   D  helium    sFA 
+trans u D 0. 0. 0. 0. 0. 120
+
+cell  E_channel   E  helium   -sCO  #(-sCR2   srtop)
+cell  E_cr        E  fill RSC          -sCR2   srtop
+cell  E_assembly  E  fill OL   sCO   -sFA
+cell  E_coolant   E  helium    sFA 
+trans u E 0. 0. 0. 0. 0. 180
+
+cell  Z_out_channel    Z  helium           -sCR  #(-sCR2   srtop)
+cell  Z_cr             Z  fill CR          -sCR2   srtop
+cell  Z_out_assembly1  Z  h2020     sCR  -sFA -srperm
+cell  Z_out_assembly2  Z  h451      sCR  -sFA  srperm
+cell  Z_out_coolant    Z  helium    sFA 
+
+cell  Y_out_channel   Y  helium   -sCR  #(-sCR2   srtop)
+cell  Y_cr            Y  fill CR          -sCR2   srtop
+cell  Y_out_assembly1 Y  h2020     sCR  -sFA -srperm
+cell  Y_out_assembly2 Y  h451      sCR  -sFA  srperm
+cell  Y_out_coolant   Y  helium    sFA 
+trans u Y 0. 0. 0. 0. 0. -120
+
+cell  X_out_channel   X  helium   -sCR  #(-sCR2   srtop)
+cell  X_cr            X  fill CR          -sCR2   srtop
+cell  X_out_assembly1 X  h2020     sCR  -sFA -srperm
+cell  X_out_assembly2 X  h451      sCR  -sFA  srperm
+cell  X_out_coolant   X  helium    sFA 
+trans u X 0. 0. 0. 0. 0. -60
+
+cell  W_out_channel   W  helium   -sCR  #(-sCR2   srtop)
+cell  W_cr            W  fill CR          -sCR2   srtop
+cell  W_out_assembly1 W  h2020     sCR  -sFA -srperm
+cell  W_out_assembly2 W  h451      sCR  -sFA  srperm
+cell  W_out_coolant   W  helium    sFA 
+trans u W 0. 0. 0. 0. 0. 60
+
+cell  V_out_channel   V  helium   -sCR  #(-sCR2   srtop)
+cell  V_cr            V  fill CR          -sCR2   srtop
+cell  V_out_assembly1 V  h2020     sCR  -sFA -srperm
+cell  V_out_assembly2 V  h451      sCR  -sFA  srperm
+cell  V_out_coolant   V  helium    sFA 
+trans u V 0. 0. 0. 0. 0. 120
+
+cell  U_out_channel   U  helium   -sCR  #(-sCR2   srtop)
+cell  U_cr            U  fill CR          -sCR2   srtop
+cell  U_out_assembly1 U  h2020     sCR  -sFA -srperm
+cell  U_out_assembly2 U  h451      sCR  -sFA  srperm
+cell  U_out_coolant   U  helium    sFA 
+trans u U 0. 0. 0. 0. 0. 180
+
+lat CORE 2 0 0 17 17 36.125
+    P P P P P P P P P P P P P P P P P
+     P P P P P P P P P R R R R R R P P
+      P P P P P P P R R V V R W W R R P
+       P P P P P P R V R I I I I R W R P
+        P P P P P R V I I I I I I I W R P
+         P P P P R R I I I O O I I I R R P
+          P P P R U I I C R X R B I I Z R P
+           P P R U I I C Z R R Y B I I Z R P
+            P P R R I I R R R R R I I R R P P
+             P R U I I D W R R U A I I Z R P P
+              P R U I I D R V R A I I Z R P P P
+               P R R I I I E E I I I R R P P P P
+                P R Y I I I I I I I X R P P P P P
+                 P R Y R I I I I R X R P P P P P P
+                  P R R Y Y R X X R R P P P P P P P
+                   P P R R R R R R P P P P P P P P P
+                    P P P P P P P P P P P P P P P P P
+
+
+cell  core    0 fill CORE    -sR  sbot  -stop    
+cell  refl    0 h2020     sR -sC  sbot  -stop   
+cell  outer1  0 outside   sC     
+cell  outer2  0 outside      -sC        -sbot
+cell  outer3  0 outside      -sC  stop
+
+set pop 100000 1500 500 1.0 10 1
+set bc 1
+set gcu -1
+set ures yes 
+
+plot 1 16500 25000    0   -297.3 297.3    0. 1110.18
+plot 3 25000 25000 200.25   50. 75. 50. 75.
+plot 3 10000 10000 1000   -300. 300. -300. 300.
+plot 3 10000 10000   90   -300. 300. -300. 300.
+
+set acelib "/home/SHARED/Serpent/xsdata/endfb71/s2v0_endfb71.xsdata"

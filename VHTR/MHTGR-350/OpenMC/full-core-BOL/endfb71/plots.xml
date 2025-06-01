@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plots>
+  <plot basis="xy" color_by="material" filename="plot_xy_central" id="1" type="slice">
+    <origin>0 150 200.25</origin>
+    <width>600 300</width>
+    <pixels>60000 30000</pixels>
+    <color id="1" rgb="156 157 142" />
+    <color id="2" rgb="178 20 254" />
+    <color id="3" rgb="101 146 212" />
+    <color id="4" rgb="50 68 215" />
+    <color id="5" rgb="252 134 25" />
+    <color id="6" rgb="139 252 234" />
+    <color id="7" rgb="203 133 79" />
+    <color id="8" rgb="72 255 137" />
+    <color id="9" rgb="37 235 140" />
+    <color id="10" rgb="204 71 237" />
+    <color id="13" rgb="192 144 129" />
+    <color id="14" rgb="215 233 241" />
+  </plot>
+  <plot basis="xy" color_by="material" filename="plot_xy_lower" id="2" type="slice">
+    <origin>0 150 993.24</origin>
+    <width>600 300</width>
+    <pixels>60000 30000</pixels>
+    <color id="1" rgb="156 157 142" />
+    <color id="2" rgb="178 20 254" />
+    <color id="3" rgb="101 146 212" />
+    <color id="4" rgb="50 68 215" />
+    <color id="5" rgb="252 134 25" />
+    <color id="6" rgb="139 252 234" />
+    <color id="7" rgb="203 133 79" />
+    <color id="8" rgb="72 255 137" />
+    <color id="9" rgb="37 235 140" />
+    <color id="10" rgb="204 71 237" />
+    <color id="13" rgb="192 144 129" />
+    <color id="14" rgb="215 233 241" />
+  </plot>
+  <plot basis="yz" color_by="material" filename="plot_yz" id="3" type="slice">
+    <origin>0 0 555.09</origin>
+    <width>600 1110.18</width>
+    <pixels>30000 55509</pixels>
+    <color id="1" rgb="156 157 142" />
+    <color id="2" rgb="178 20 254" />
+    <color id="3" rgb="101 146 212" />
+    <color id="4" rgb="50 68 215" />
+    <color id="5" rgb="252 134 25" />
+    <color id="6" rgb="139 252 234" />
+    <color id="7" rgb="203 133 79" />
+    <color id="8" rgb="72 255 137" />
+    <color id="9" rgb="37 235 140" />
+    <color id="10" rgb="204 71 237" />
+    <color id="13" rgb="192 144 129" />
+    <color id="14" rgb="215 233 241" />
+  </plot>
+</plots>
