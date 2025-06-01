@@ -10,22 +10,64 @@ Each folder relates to a corresponding reactor type containing folders with diff
 ```
 ├── GFR
 │   └── GFR2400
+│       ├── OpenMC
+│       ├── SCALE
+│       ├── Serpent
+│       └── README.md
+├── LFR
+│   └── ALFRED
+│       ├── OpenMC
+│       ├── SCALE
+│       ├── Serpent
 │       └── README.md
 ├── MSR
 │   ├── MSFR
+│   │   ├── OpenMC
+│   │   ├── SCALE
+│   │   ├── Serpent
 │   │   └── README.md
 │   ├── MSFR-Cl
+│   │   ├── OpenMC
+│   │   ├── SCALE
+│   │   ├── Serpent
 │   │   └── README.md
-│   └── MSFR-TRU
+│   ├── MSFR-Cl-TRU
+│   │   ├── OpenMC
+│   │   ├── SCALE
+│   │   ├── Serpent
+│   │   └── README.md
+│   ├── MSFR-Cl-UTRU
+│   │   ├── OpenMC
+│   │   ├── SCALE
+│   │   ├── Serpent
+│   │   └── README.md
+│   ├── MSFR-TRU
+│   │   ├── OpenMC
+│   │   ├── SCALE
+│   │   ├── Serpent
+│   │   └── README.md
+│   └── MSFR-UTRU
+│       ├── OpenMC
+│       ├── SCALE
+│       ├── Serpent
 │       └── README.md
 ├── PWR
 │   └── NuScale
+│       ├── OpenMC
+│       ├── SCALE
+│       ├── Serpent
 │       └── README.md
 ├── SCWR
 │   └── SCWR-SP
+│       ├── OpenMC
+│       ├── SCALE
+│       ├── Serpent
 │       └── README.md
 ├── SFR
 │   ├── CAR3600
+│   │   ├── OpenMC
+│   │   ├── SCALE
+│   │   ├── Serpent
 │   │   └── README.md
 │   ├── MET1000
 │   │   ├── OpenMC
@@ -35,6 +77,15 @@ Each folder relates to a corresponding reactor type containing folders with diff
 │   └── MOX3600
 │       ├── OpenMC
 │       ├── SCALE
+│       ├── Serpent
+│       └── README.md
+├── VHTR
+│   ├── GT-MHR
+│   │   ├── OpenMC
+│   │   ├── Serpent
+│   │   └── README.md
+│   └── MHTGR-350
+│       ├── OpenMC
 │       ├── Serpent
 │       └── README.md
 └── README.md
