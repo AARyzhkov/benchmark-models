@@ -1,0 +1,372 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          GT-MHR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mat puo sum tmp 1200
+    Pu-238.12c 0.2935E-04
+    Pu-239.12c 0.2062E-01
+    Pu-240.12c 0.1467E-02
+    Pu-241.12c 0.2609E-03
+    Pu-242.12c 0.9548E-04
+    O-16.12c   0.4046E-01
+    Xe-135.12c 0.5720E-06
+    Sm-149.12c 0.5720E-06
+
+mat matrix sum tmp 1200 moder graphite12 6000 
+    B-10.12c  0.1810E-07
+    B-11.12c  0.7286E-07
+    C-nat.12c 0.8339E-01
+    Si-28.12c 0.1418E-02
+
+mat poison sum tmp 1200 moder graphite12 6000 
+    B-10.12c   0.1979E-07
+    B-11.12c   0.7966E-07
+    C-nat.12c  0.8137E-01
+    O-16.12c   0.1848E-02
+    Er-166.12c 0.4138E-03
+    Er-167.12c 0.2798E-03
+    Er-168.12c 0.3333E-03
+
+mat helium sum tmp 1200
+    He-4.12c  5.5000E-4
+
+mat reflector sum tmp 1200 moder graphite12 6000 
+    B-10.12c  0.211E-07
+    B-11.12c  0.849E-07
+    C-nat.12c 0.867E-01
+
+mat cr_graphite sum tmp 1200 moder graphite12 6000 
+    B-10.12c  0.211E-07
+    B-11.12c  0.854E-07
+    C-nat.12c 0.872E-01
+
+mat b4c sum tmp 1200
+    B-10.12c  0.111E-01
+    B-11.12c  0.449E-01
+    C-nat.12c 0.141E-01
+
+mat poison_b4c sum tmp 1200 moder graphite12 6000 
+    B-10.12c  0.260E-02
+    B-11.12c  0.105E-01
+    C-nat.12c 0.735E-01
+
+therm graphite12 1200 gre7.22t gre7.22t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Pincells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+particle 1
+    puo    0.01000
+    matrix
+
+pin c
+    helium 0.8000
+    reflector
+
+pin pBoron
+    poison 0.6250
+    reflector
+
+pin pPoison
+    poison_b4c 0.6250
+    reflector
+
+pin M
+    reflector
+pin P
+    reflector
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+surf sbot pz   0
+surf   s0 pz 130
+% surf   s1 pz 210
+% surf   s2 pz 290
+% surf   s3 pz 370
+% surf   s4 pz 450
+% surf   s5 pz 530
+% surf   s6 pz 610
+% surf   s7 pz 690
+% surf   s8 pz 770
+% surf   s9 pz 850
+surf  s10 pz 930
+surf stop pz 1060
+
+surf spbed inf
+cell cpbed pbs matrix -spbed
+pbed triso pbs "particles.inp"
+surf comp_r cyl 0.0 0.0 0.6250
+
+surf sCH  cylz -9.9  0.   6.5
+surf sCR1 cylz -9.9  0.   2.3
+surf sCR2 cylz -9.9  0.   3.1
+surf sCR3 cylz -9.9  0.   3.5
+surf sCR4 cylz -9.9  0.   3.9
+surf sCR5 cylz -9.9  0.   5.1
+surf sCR6 cylz -9.9  0.   5.5
+
+surf sFA hexxc    0. 0.  18.0
+surf sC   cylz    0. 0. 350.0
+
+cell cBP1 b reflector        -s0
+cell cBP2 b fill pBoron  s0 -s10
+cell cBP3 b reflector   s10 
+
+cell cRP1 p reflector        -s0
+cell cRP2 p fill pPoison  s0 -s10
+cell cRP3 p reflector   s10 
+
+cell cFP1  f reflector        -s0
+cell cFP2  f fill triso   s0 -s10 -comp_r
+cell cFP21 f reflector    s0 -s10  comp_r
+cell cFP3  f reflector      s10 
+
+        
+lat IL 3 0 0 23 23 1.9
+    M M M M M M M M M M M M M M M M M M M M M M M
+     M M M M M M M M M M M f f c f f c f f c f f M
+      M M M M M M M M M M f c f f c f f c f f c f M
+       M M M M M M M M M c f f c f f c f f c f f c M
+        M M M M M M M M f f c b f c f f c f b c f f M
+         M M M M M M M f c f f c f f c f f c f f c f M
+          M M M M M M c f f c f f c f f c f f c f f c M
+           M M M M M f f c f f c b f c f b c f f c f f M
+            M M M M f c f f c f f c f f c f f c f f c f M
+             M M M c f f c f f c f f c f f c f f c f f c M
+              M M f f c f f c f f c M M c f f c f f c f f M
+               M b c f b c f b c f M M M f c b f c b f c b M
+                M f f c f f c f f c M M c f f c f f c f f M M
+                 M c f f c f f c f f c f f c f f c f f c M M M
+                  M f c f f c f f c f f c f f c f f c f M M M M
+                   M f f c f f c b f c f b c f f c f f M M M M M
+                    M c f f c f f c f f c f f c f f c M M M M M M
+                     M f c f f c f f c f f c f f c f M M M M M M M
+                      M f f c b f c f f c f b c f f M M M M M M M M
+                       M c f f c f f c f f c f f c M M M M M M M M M
+                        M f c f f c f f c f f c f M M M M M M M M M M
+                         M f f c f f c f f c f f M M M M M M M M M M M
+                          M M M M M M M M M M M M M M M M M M M M M M M
+
+lat IR 3 0 0 23 23 1.9
+    M M M M M M M M M M M M M M M M M M M M M M M
+     M M M M M M M M M M M p M M M M M M M M M p M
+      M M M M M M M M M M M M M M M M M M M M M M M
+       M M M M M M M M M M M M M M M M M M M M M M M
+        M M M M M M M M M M M M M M M M M M M M M M M
+         M M M M M M M M M M M M M M M M M M M M M M M
+          M M M M M M M M M M M M M M M M M M M M M M M
+           M M M M M M M M M M M M M M M M M M M M M M M
+            M M M M M M M M M M M M M M M M M M M M M M M
+             M M M M M M M M M M M M M M M M M M M M M M M
+              M M M M M M M M M M M M M M M M M M M M M M M
+               M p M M M M M M M M M M M M M M M M M M M p M
+                M M M M M M M M M M M M M M M M M M M M M M M
+                 M M M M M M M M M M M M M M M M M M M M M M M
+                  M M M M M M M M M M M M M M M M M M M M M M M
+                   M M M M M M M M M M M M M M M M M M M M M M M
+                    M M M M M M M M M M M M M M M M M M M M M M M
+                     M M M M M M M M M M M M M M M M M M M M M M M
+                      M M M M M M M M M M M M M M M M M M M M M M M
+                       M M M M M M M M M M M M M M M M M M M M M M M
+                        M M M M M M M M M M M M M M M M M M M M M M M
+                         M p M M M M M M M M M p M M M M M M M M M M M
+                          M M M M M M M M M M M M M M M M M M M M M M M
+
+lat OL 3 0 0 23 23 1.9
+    M M M M M M M M M M M M M M M M M M M M M M M
+     M M M M M M M M M M M f f c M M M M M c f f M
+      M M M M M M M M M M f c f M M M M M M f c f M
+       M M M M M M M M M c f f M M M M M M M f f c M
+        M M M M M M M M f f c M M M M M M M M c f f M
+         M M M M M M M f c f M M M M M M M M M f c f M
+          M M M M M M c f f c M M M M M M M M c f f c M
+           M M M M M f f c f f M M M M M M M f f c f f M
+            M M M M f c f f c f M M M M M M f c f f c f M
+             M M M c f f c f f c M M M M M c f f c f f c M
+              M M f f c f f c f f c M M c f f c f f c f f M
+               M b c f b c f b c f M M M f c b f c b f c b M
+                M f f c f f c f f c M M c f f c f f c f f M M
+                 M c f f c f f c f f c f f c f f c f f c M M M
+                  M f c f f c f f c f f c f f c f f c f M M M M
+                   M f f c f f c b f c f b c f f c f f M M M M M
+                    M c f f c f f c f f c f f c f f c M M M M M M
+                     M f c f f c f f c f f c f f c f M M M M M M M
+                      M f f c b f c f f c f b c f f M M M M M M M M
+                       M c f f c f f c f f c f f c M M M M M M M M M
+                        M f c f f c f f c f f c f M M M M M M M M M M
+                         M f f c f f c f f c f f M M M M M M M M M M M
+                          M M M M M M M M M M M M M M M M M M M M M M M
+
+
+cell  inner_assembly  I  fill IL       -sFA 
+cell  inner_coolant   I  helium    sFA 
+
+cell hole_cr   CR helium             -sCR1
+cell gr_cr     CR cr_graphite  sCR1  -sCR2
+cell gap_cr    CR helium       sCR2  -sCR3
+cell sleeve_cr CR cr_graphite  sCR3  -sCR4
+cell b4c_cr    CR b4c          sCR4  -sCR5
+cell clad_cr   CR cr_graphite  sCR5
+
+cell  outer_channel   O  helium          -sCH  #(-sCR6   s10)
+cell  outer_cr        O  fill CR                 -sCR6   s10
+cell  outer_assembly  O  fill OL   sCH   -sFA
+cell  outer_coolant   O  helium    sFA 
+
+cell  refl_assembly  R  reflector       -sFA 
+cell  refl_coolant   R  helium    sFA 
+
+cell  refl_poison_top       T  reflector      -sFA s10
+cell  refl_poison_assembly  T  fill IR        -sFA  s0  -s10
+cell  refl_poison_bot       T  reflector      -sFA      -s0
+cell  refl_poison_coolant   T  helium    sFA 
+
+cell  A_channel   A  helium   -sCH  #(-sCR6   s10)
+cell  A_cr        A  fill CR          -sCR6   s10
+cell  A_assembly  A  fill OL   sCH   -sFA
+cell  A_coolant   A  helium    sFA 
+trans u A 0. 0. 0. 0. 0. -120
+
+cell  B_channel   B  helium   -sCH  #(-sCR6   s10)
+cell  B_cr        B  fill CR          -sCR6   s10
+cell  B_assembly  B  fill OL   sCH   -sFA
+cell  B_coolant   B  helium    sFA 
+trans u B 0. 0. 0. 0. 0. -60
+
+cell  C_channel   C  helium   -sCH  #(-sCR6   s10)
+cell  C_cr        C  fill CR          -sCR6   s10
+cell  C_assembly  C  fill OL   sCH   -sFA
+cell  C_coolant   C  helium    sFA 
+trans u C 0. 0. 0. 0. 0. 60
+
+cell  D_channel   D  helium   -sCH  #(-sCR6   s10)
+cell  D_cr        D  fill CR          -sCR6   s10
+cell  D_assembly  D  fill OL   sCH   -sFA
+cell  D_coolant   D  helium    sFA 
+trans u D 0. 0. 0. 0. 0. 120
+
+cell  E_channel   E  helium   -sCH  #(-sCR6   s10)
+cell  E_cr        E  fill CR          -sCR6   s10
+cell  E_assembly  E  fill OL   sCH   -sFA
+cell  E_coolant   E  helium    sFA 
+trans u E 0. 0. 0. 0. 0. 180
+
+cell  Z_out_channel   Z  helium   -sCH  #(-sCR6   s10)
+cell  Z_cr            Z  fill CR          -sCR6   s10
+cell  Z_out_assembly  Z  reflector sCH  -sFA 
+cell  Z_out_coolant   Z  helium    sFA 
+
+cell  Y_out_channel   Y  helium   -sCH  #(-sCR6   s10)
+cell  Y_cr            Y  fill CR          -sCR6   s10
+cell  Y_out_assembly  Y  reflector sCH  -sFA 
+cell  Y_out_coolant   Y  helium    sFA 
+trans u Y 0. 0. 0. 0. 0. -120
+
+cell  X_out_channel   X  helium   -sCH  #(-sCR6   s10)
+cell  X_cr            X  fill CR          -sCR6   s10
+cell  X_out_assembly  X  reflector sCH  -sFA 
+cell  X_out_coolant   X  helium    sFA 
+trans u X 0. 0. 0. 0. 0. -60
+
+cell  W_out_channel   W  helium   -sCH  #(-sCR6   s10)
+cell  W_cr            W  fill CR          -sCR6   s10
+cell  W_out_assembly  W  reflector sCH  -sFA 
+cell  W_out_coolant   W  helium    sFA 
+trans u W 0. 0. 0. 0. 0. 60
+
+cell  V_out_channel   V  helium   -sCH  #(-sCR6   s10)
+cell  V_cr            V  fill CR          -sCR6   s10
+cell  V_out_assembly  V  reflector sCH  -sFA 
+cell  V_out_coolant   V  helium    sFA 
+trans u V 0. 0. 0. 0. 0. 120
+
+cell  U_out_channel   U  helium   -sCH  #(-sCR6   s10)
+cell  U_cr            U  fill CR          -sCR6   s10
+cell  U_out_assembly  U  reflector sCH  -sFA 
+cell  U_out_coolant   U  helium    sFA 
+trans u U 0. 0. 0. 0. 0. 180
+
+lat CORE 2 0 0 23 23 36.25
+    P P P P P P P P P P P P P P P P P P P P P P P
+     P P P P P P P P P P P P P P P P P P P P P P P
+      P P P P P P P P P P P P R R R R R R R R P P P
+       P P P P P P P P P P R R R W W W W R W R R P P
+        P P P P P P P P P R V V I O I I I D W R R P P
+         P P P P P P P P R R E I I I C I I I I Z R P P
+          P P P P P P P R U I I I I O O I I I B Z R P P
+           P P P P P P R U I I I T T T T T I I I W R P P
+            P P P P P R V I D C T R R R R T B O I W R P P
+             P P P P R V C I C T R R R R R T B I I R R P P
+              P P P R R I I I T R R R R R R T I I C Z R P P
+               P P P R U I I T R R R R R R R T I I Z R P P P
+                P P R U B I I T R R R R R R T I I I R R P P P
+                 P P R R I I B T R R R R R T A I A X R P P P P
+                  P P R Y I A B T R R R R T A B I X R P P P P P
+                   P P R Y I I I T T T T T I I I Z R P P P P P P
+                    P P R U D I I I E E I I I I Z R P P P P P P P
+                     P P R U I I I I A I I I O R R P P P P P P P P
+                      P P R R Y B I I I E I X X R P P P P P P P P P
+                       P P R R Y R X X Y Y R R R P P P P P P P P P P
+                        P P P R R R R R R R R P P P P P P P P P P P P
+                         P P P P P P P P P P P P P P P P P P P P P P P
+                          P P P P P P P P P P P P P P P P P P P P P P P
+
+
+
+
+cell  core    0 fill CORE   -sC   sbot  -stop    
+cell  outer1  0 outside   sC     
+cell  outer2  0 outside  -sC         -sbot
+cell  outer3  0 outside  -sC   stop
+
+set pop 100000 1500 500 1.0 10 1
+set bc 1
+set gcu -1
+set ures yes 
+
+plot 1  8250 12500   0   -350. 350.    0. 1060
+plot 3 10000 10000 500   -400. 400. -400. 400.
+plot 3 10000 10000 960   -400. 400. -400. 400.
+plot 3 10000 10000 100   -400. 400. -400. 400.
+
+set acelib "/mnt/e/Codes/NuclearData/Serpent/endfb71/s2v0_endfb71.xsdata"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Sensitivity
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ene scale56 4 scale56_ext
+% sens opt egrid scale56
+% sens opt latgen 10
+% sens opt history 1
+% set ifp 10
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Responses
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% sens resp keff 1
+% sens resp beff 1 1
+% sens resp leff 1
+% sens resp lambda 1 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% --- Sensitivity pertrubations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% sens pert zailist all
+% sens pert matlist total
+% sens pert xs mtlist 2 4 16 18 102 103 104 105 106 107
+% sens pert xs realist ela sab
+% sens pert eleg 3
+% sens pert chi 1
+% sens pert nubar 1
