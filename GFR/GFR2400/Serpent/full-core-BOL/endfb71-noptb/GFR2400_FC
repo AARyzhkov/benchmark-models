@@ -1,0 +1,516 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          GFR2400
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mat inner_fuel_1 sum tmp 1263
+    Pu-238.12c  9.9251E-05 
+    Pu-239.12c  2.0585E-03
+    Pu-240.12c  9.5207E-04
+    Pu-241.12c  2.7202E-04
+    Pu-242.12c  2.6834E-04
+    Am-241.12c  2.5732E-05
+    U-235.12c   1.6239E-04
+    U-238.12c   2.2391E-02
+    C-nat.12c   2.6230E-02    
+
+mat inner_fuel_2 sum tmp 1263
+    Pu-238.12c  9.9251E-05 
+    Pu-239.12c  2.0585E-03
+    Pu-240.12c  9.5207E-04
+    Pu-241.12c  2.7202E-04
+    Pu-242.12c  2.6834E-04
+    Am-241.12c  2.5732E-05
+    U-235.12c   1.6239E-04
+    U-238.12c   2.2391E-02
+    C-nat.12c   2.6230E-02 
+
+mat inner_fuel_3 sum tmp 1263
+    Pu-238.12c  9.9251E-05
+    Pu-239.12c  2.0585E-03
+    Pu-240.12c  9.5207E-04
+    Pu-241.12c  2.7202E-04
+    Pu-242.12c  2.6834E-04
+    Am-241.12c  2.5732E-05
+    U-235.12c   1.6239E-04
+    U-238.12c   2.2391E-02
+    C-nat.12c   2.6230E-02
+
+mat inner_fuel_4 sum tmp 1263
+    Pu-238.12c  9.9251E-05
+    Pu-239.12c  2.0585E-03
+    Pu-240.12c  9.5207E-04
+    Pu-241.12c  2.7202E-04
+    Pu-242.12c  2.6834E-04
+    Am-241.12c  2.5732E-05
+    U-235.12c   1.6239E-04
+    U-238.12c   2.2391E-02
+    C-nat.12c   2.6230E-02
+
+mat inner_fuel_5 sum tmp 1263
+    Pu-238.12c  9.9251E-05 
+    Pu-239.12c  2.0585E-03
+    Pu-240.12c  9.5207E-04
+    Pu-241.12c  2.7202E-04
+    Pu-242.12c  2.6834E-04
+    Am-241.12c  2.5732E-05
+    U-235.12c   1.6239E-04
+    U-238.12c   2.2391E-02
+    C-nat.12c   2.6230E-02 
+
+mat outer_fuel_1 sum tmp 1263
+    Pu-238.12c  1.2406E-04 
+    Pu-239.12c  2.5732E-03
+    Pu-240.12c  1.1901E-03
+    Pu-241.12c  3.4003E-04
+    Pu-242.12c  3.3543E-04
+    Am-241.12c  3.2165E-05
+    U-235.12c   1.5571E-04
+    U-238.12c   2.1471E-02
+    C-nat.12c   2.6222E-02 
+
+mat outer_fuel_2 sum tmp 1263
+    Pu-238.12c  1.2406E-04 
+    Pu-239.12c  2.5732E-03
+    Pu-240.12c  1.1901E-03
+    Pu-241.12c  3.4003E-04
+    Pu-242.12c  3.3543E-04
+    Am-241.12c  3.2165E-05
+    U-235.12c   1.5571E-04
+    U-238.12c   2.1471E-02
+    C-nat.12c   2.6222E-02 
+
+mat outer_fuel_3 sum tmp 1263
+    Pu-238.12c  1.2406E-04 
+    Pu-239.12c  2.5732E-03
+    Pu-240.12c  1.1901E-03
+    Pu-241.12c  3.4003E-04
+    Pu-242.12c  3.3543E-04
+    Am-241.12c  3.2165E-05
+    U-235.12c   1.5571E-04
+    U-238.12c   2.1471E-02
+    C-nat.12c   2.6222E-02 
+
+mat outer_fuel_4 sum tmp 1263
+    Pu-238.12c  1.2406E-04 
+    Pu-239.12c  2.5732E-03
+    Pu-240.12c  1.1901E-03
+    Pu-241.12c  3.4003E-04
+    Pu-242.12c  3.3543E-04
+    Am-241.12c  3.2165E-05
+    U-235.12c   1.5571E-04
+    U-238.12c   2.1471E-02
+    C-nat.12c   2.6222E-02 
+
+mat outer_fuel_5 sum tmp 1263
+    Pu-238.12c  1.2406E-04
+    Pu-239.12c  2.5732E-03
+    Pu-240.12c  1.1901E-03
+    Pu-241.12c  3.4003E-04
+    Pu-242.12c  3.3543E-04
+    Am-241.12c  3.2165E-05
+    U-235.12c   1.5571E-04
+    U-238.12c   2.1471E-02
+    C-nat.12c   2.6222E-02
+
+mat he10 sum tmp 913
+    He-3.09c    1.5843E-10
+    He-4.09c    7.9213E-05
+
+mat w14re sum tmp 913
+    W-180.09c   6.5735E-05
+    W-182.09c   1.4516E-02
+    W-183.09c   7.8388E-03
+    W-184.09c   1.6784E-02
+    W-186.09c   1.5574E-02
+    Re-185.09c  3.3351E-03
+    Re-187.09c  5.5823E-03
+
+mat re sum tmp 913
+    Re-185.09c  2.5425E-02
+    Re-187.09c  4.2556E-02
+
+mat sic sum tmp 913
+    Si-28.09c   3.6015E-02
+    Si-29.09c   1.8288E-03
+    Si-30.09c   1.2055E-03
+    C-nat.09c   3.9050E-02
+
+mat he70 sum tmp 913
+    He-3.09c    1.0997E-09
+    He-4.09c    5.4984E-04
+
+mat axial_refl sum tmp 913
+    Zr-90.09c   9.9422E-03
+    Zr-91.09c   2.1681E-03
+    Zr-92.09c   3.3141E-03
+    Zr-94.09c   3.3585E-03
+    Zr-96.09c   5.4107E-04
+    Si-28.09c   1.1882E-02
+    Si-29.09c   6.0331E-04
+    Si-30.09c   3.9771E-04
+    He-3.09c    4.3988E-10
+    He-4.09c    2.1994E-04
+
+mat radial_refl sum tmp 913
+    Zr-90.09c   1.3256E-02
+    Zr-91.09c   2.8909E-03
+    Zr-92.09c   4.4187E-03
+    Zr-94.09c   4.4780E-03
+    Zr-96.09c   7.2143E-04
+    Si-28.09c   1.5842E-02
+    Si-29.09c   8.0442E-04
+    Si-30.09c   5.3028E-04
+    He-3.09c    2.1994E-10
+    He-4.09c    1.0997E-04
+
+mat plenum sum tmp 913
+    He-3.09c    5.1971E-10
+    He-4.09c    2.5985E-04
+    Re-185.09c  6.9111E-05
+    Re-187.09c  1.1568E-04
+    W-180.09c   4.6014E-07
+    W-182.09c   1.0161E-04
+    W-183.09c   5.4872E-05
+    W-184.09c   1.1749E-04
+    W-186.09c   1.0902E-04
+    Si-28.09c   9.3280E-03
+    Si-29.09c   4.7365E-04
+    Si-30.09c   3.1223E-04
+    C-nat.09c   1.0114E-02
+
+mat absorber sum tmp 923
+    B-10.09c    2.3910E-02
+    B-11.09c    2.6594E-03
+    Mn-55.09c   1.4686E-04
+    Si-28.09c   4.0472E-03
+    Si-29.09c   2.0551E-04
+    Si-30.09c   1.3547E-04
+    P-31.09c    7.1105E-06
+    Ti-46.09c   3.7404E-06
+    Ti-47.09c   3.3731E-06
+    Ti-48.09c   3.3423E-05
+    Ti-49.09c   2.4528E-06
+    Ti-50.09c   2.3485E-06
+    Cr-50.09c   6.4603E-05
+    Cr-52.09c   1.2458E-03
+    Cr-53.09c   1.4126E-04
+    Cr-54.09c   3.5164E-05
+    Ni-58.09c   9.7239E-04
+    Ni-60.09c   3.7456E-04
+    Ni-61.09c   1.6282E-05
+    Ni-62.09c   5.1914E-05
+    Ni-64.09c   1.3221E-05
+    Mo-92.09c   1.2376E-05
+    Mo-94.09c   7.7613E-06
+    Mo-95.09c   1.3410E-05
+    Mo-96.09c   1.4086E-05
+    Mo-97.09c   8.0950E-06
+    Mo-98.09c   2.0522E-05
+    Mo-100.09c  8.2319E-06
+    Fe-54.09c   3.6914E-04
+    Fe-56.09c   5.7947E-03
+    Fe-57.09c   1.3383E-04
+    Fe-58.09c   1.7810E-05
+    He-3.09c    5.2422E-10
+    He-4.09c    2.6211E-04
+    C-nat.09c   1.0919E-02
+
+mat follower sum tmp 913
+    Mn-55.09c   1.5707E-05
+    Si-28.09c   3.9226E-03
+    Si-29.09c   1.9918E-04
+    Si-30.09c   1.3130E-04
+    P-31.09c    7.6048E-07
+    Ti-46.09c   4.0004E-07
+    Ti-47.09c   3.6076E-07
+    Ti-48.09c   3.5746E-06
+    Ti-49.09c   2.6233E-07
+    Ti-50.09c   2.5118E-07
+    Cr-50.09c   6.9094E-06
+    Cr-52.09c   1.3324E-04
+    Cr-53.09c   1.5108E-05
+    Cr-54.09c   3.7608E-06
+    Ni-58.09c   1.0400E-04
+    Ni-60.09c   4.0060E-05
+    Ni-61.09c   1.7414E-06
+    Ni-62.09c   5.5523E-06
+    Ni-64.09c   1.4140E-06
+    B-10.09c    7.3723E-08
+    B-11.09c    2.9824E-07
+    Mo-92.09c   1.3236E-06
+    Mo-94.09c   8.3009E-07
+    Mo-95.09c   1.4342E-06
+    Mo-96.09c   1.5065E-06
+    Mo-97.09c   8.6578E-07
+    Mo-98.09c   2.1949E-06
+    Mo-100.09c  8.8041E-07
+    Fe-54.09c   3.9480E-05
+    Fe-56.09c   6.1975E-04
+    Fe-57.09c   1.4313E-05
+    Fe-58.09c   1.9048E-06
+    He-3.09c    9.6718E-10
+    He-4.09c    4.8359E-04
+    C-nat.09c   4.2412E-03
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Pincells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+pin pInnerFuel_1
+    inner_fuel_1 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pInnerFuel_2
+    inner_fuel_2 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pInnerFuel_3
+    inner_fuel_3 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pInnerFuel_4
+    inner_fuel_4 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pInnerFuel_5
+    inner_fuel_5 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pOuterFuel_1
+    outer_fuel_1 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pOuterFuel_2
+    outer_fuel_2 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pOuterFuel_3
+    outer_fuel_3 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pOuterFuel_4
+    outer_fuel_4 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin pOuterFuel_5
+    outer_fuel_5 0.3355
+    he10   0.3500
+    w14re  0.3540
+    re     0.3550
+    sic    0.4550
+    sic    0.4580
+    he70   
+
+pin c
+    he70
+pin R
+    radial_refl
+pin V
+    void
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+surf   s0 pz 0
+surf s100 pz 100
+surf s150 pz 150
+surf s183 pz 183
+surf s216 pz 216
+surf s249 pz 249
+surf s282 pz 282
+surf s315 pz 315
+surf s400 pz 400
+surf s500 pz 500
+
+surf sID hexxc 0. 0. 8.5645
+surf sOD hexxc 0. 0. 8.7645
+surf sFA hexxc 0. 0. 8.9145
+surf sC  hexyc 0. 0. 290.0
+
+cell cInnerPin1  i fill pInnerFuel_1      -s183
+cell cInnerPin2  i fill pInnerFuel_2 s183 -s216
+cell cInnerPin3  i fill pInnerFuel_3 s216 -s249
+cell cInnerPin4  i fill pInnerFuel_4 s249 -s282
+cell cInnerPin5  i fill pInnerFuel_5 s282 
+
+cell cOuterPin1  o fill pOuterFuel_1      -s183
+cell cOuterPin2  o fill pOuterFuel_2 s183 -s216
+cell cOuterPin3  o fill pOuterFuel_3 s216 -s249
+cell cOuterPin4  o fill pOuterFuel_4 s249 -s282
+cell cOuterPin5  o fill pOuterFuel_5 s282 
+
+lat IL 3 0 0 21 21 1.157
+    c c c c c c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c c c c c c 
+    c c c c c c c c c c i i i i i i i i i c c 
+    c c c c c c c c c i i i i i i i i i i c c 
+    c c c c c c c c i i i i i i i i i i i c c 
+    c c c c c c c i i i i i i i i i i i i c c 
+    c c c c c c i i i i i i i i i i i i i c c 
+    c c c c c i i i i i i i i i i i i i i c c 
+    c c c c i i i i i i i i i i i i i i i c c 
+    c c c i i i i i i i i i i i i i i i i c c 
+    c c i i i i i i i i i i i i i i i i i c c 
+    c c i i i i i i i i i i i i i i i i c c c 
+    c c i i i i i i i i i i i i i i i c c c c 
+    c c i i i i i i i i i i i i i i c c c c c 
+    c c i i i i i i i i i i i i i c c c c c c 
+    c c i i i i i i i i i i i i c c c c c c c 
+    c c i i i i i i i i i i i c c c c c c c c 
+    c c i i i i i i i i i i c c c c c c c c c 
+    c c i i i i i i i i i c c c c c c c c c c 
+    c c c c c c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c c c c c c
+
+lat OL 3 0 0 21 21 1.157
+    c c c c c c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c c c c c c 
+    c c c c c c c c c c o o o o o o o o o c c 
+    c c c c c c c c c o o o o o o o o o o c c 
+    c c c c c c c c o o o o o o o o o o o c c 
+    c c c c c c c o o o o o o o o o o o o c c 
+    c c c c c c o o o o o o o o o o o o o c c 
+    c c c c c o o o o o o o o o o o o o o c c 
+    c c c c o o o o o o o o o o o o o o o c c 
+    c c c o o o o o o o o o o o o o o o o c c 
+    c c o o o o o o o o o o o o o o o o o c c 
+    c c o o o o o o o o o o o o o o o o c c c 
+    c c o o o o o o o o o o o o o o o c c c c 
+    c c o o o o o o o o o o o o o o c c c c c 
+    c c o o o o o o o o o o o o o c c c c c c 
+    c c o o o o o o o o o o o o c c c c c c c 
+    c c o o o o o o o o o o o c c c c c c c c 
+    c c o o o o o o o o o o c c c c c c c c c 
+    c c o o o o o o o o o c c c c c c c c c c 
+    c c c c c c c c c c c c c c c c c c c c c
+    c c c c c c c c c c c c c c c c c c c c c
+
+cell  inner_bot_refl  I  axial_refl              -s100
+cell  inner_bot_plen  I  plenum             s100 -s150
+cell  inner_assembly  I  fill IL       -sID s150 -s315
+cell  inner_duct      I  sic       sID -sOD s150 -s315 
+cell  inner_coolant   I  he70           sOD s150 -s315
+cell  inner_top_plen  I  plenum             s315 -s400
+cell  inner_top_refl  I  axial_refl         s400
+
+cell  outer_bot_refl  O  axial_refl              -s100
+cell  outer_bot_plen  O  plenum             s100 -s150
+cell  outer_assembly  O  fill OL       -sID s150 -s315
+cell  outer_duct      O  sic       sID -sOD s150 -s315 
+cell  outer_coolant   O  he70           sOD s150 -s315
+cell  outer_top_plen  O  plenum             s315 -s400
+cell  outer_top_refl  O  axial_refl         s400
+
+cell  csd             P  absorber           s315  
+cell  csd_follower    P  follower                -s315
+
+lat C 2 0 0 39 39 17.829
+ V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+  V V V V V V V V V V V V V V V V V V V R R R R R R R R R R R R R R R R R R R V
+   V V V V V V V V V V V V V V V V V V R R R R R R R R R R R R R R R R R R R R V
+    V V V V V V V V V V V V V V V V V R R R R R R R R R R R R R R R R R R R R R V
+     V V V V V V V V V V V V V V V V R R R R R R R R R R R R R R R R R R R R R R V
+      V V V V V V V V V V V V V V V R R R R R R R R R O O O O O R R R R R R R R R V
+       V V V V V V V V V V V V V V R R R R R R R R O O O O O O O O R R R R R R R R V
+        V V V V V V V V V V V V V R R R R R R O O O O O O O O O O O O O R R R R R R V
+         V V V V V V V V V V V V R R R R R R O O O O O P O O O O O O O O R R R R R R V
+          V V V V V V V V V V V R R R R R O O O O O O O I I I O O P O O O O R R R R R V
+           V V V V V V V V V V R R R R O O O O P O I I I I I I I I O O O O O O R R R R V
+            V V V V V V V V V R R R R O O O O O I I I I I I I I I I I O O O O O R R R R V
+             V V V V V V V V R R R R O O O O O I I P I I I P I I P I I O P O O O R R R R V
+              V V V V V V V R R R R O O O O I I I I I I I I I I I I I I I O O O O R R R R V
+               V V V V V V R R R R O O O O I I I I I I I I I I I I I I I I O O O O R R R R V
+                V V V V V R R R R R O O P I I I P I I I I I P I I I I I I I O O O R R R R R V
+                 V V V V R R R R R O O O O I I I I I P I I I I I I I P I I O O O O R R R R R V
+                  V V V R R R R R R O O O I I I I I I I I I I I I I I I I I O O O R R R R R R V
+                   V V R R R R R R O O O I I I I I I I I I I I I P I I I I I P O O R R R R R R V
+                    V R R R R R R O O O O I P I I I I I I P I I I I I I P I O O O O R R R R R R V
+                     V R R R R R R O O P I I I I I P I I I I I I I I I I I I O O O R R R R R R V V
+                      V R R R R R R O O O I I I I I I I I I I I I I I I I I O O O R R R R R R V V V
+                       V R R R R R O O O O I I P I I I I I I I P I I I I I O O O O R R R R R V V V V
+                        V R R R R R O O O I I I I I I I P I I I I I P I I I P O O R R R R R V V V V V
+                         V R R R R O O O O I I I I I I I I I I I I I I I I O O O O R R R R V V V V V V
+                          V R R R R O O O O I I I I I I I I I I I I I I I O O O O R R R R V V V V V V V 
+                           V R R R R O O O P O I I P I I P I I I P I I O O O O O R R R R V V V V V V V V 
+                            V R R R R O O O O O I I I I I I I I I I I O O O O O R R R R V V V V V V V V V
+                             V R R R R O O O O O O I I I I I I I I O P O O O O R R R R V V V V V V V V V V
+                              V R R R R R O O O O P O O I I I O O O O O O O R R R R R V V V V V V V V V V V
+                               V R R R R R R O O O O O O O O P O O O O O R R R R R R V V V V V V V V V V V V
+                                V R R R R R R O O O O O O O O O O O O O R R R R R R V V V V V V V V V V V V V
+                                 V R R R R R R R R O O O O O O O O R R R R R R R R V V V V V V V V V V V V V V
+                                  V R R R R R R R R R O O O O O R R R R R R R R R V V V V V V V V V V V V V V V 
+                                   V R R R R R R R R R R R R R R R R R R R R R R V V V V V V V V V V V V V V V V
+                                    V R R R R R R R R R R R R R R R R R R R R R V V V V V V V V V V V V V V V V V 
+                                     V R R R R R R R R R R R R R R R R R R R R V V V V V V V V V V V V V V V V V V
+                                      V R R R R R R R R R R R R R R R R R R R V V V V V V V V V V V V V V V V V V V
+                                       V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+
+cell  core    0 fill C   -sC    s0 -s500   
+cell  outer1  0 outside   sC     
+cell  outer2  0 outside  -sC       -s0
+cell  outer3  0 outside  -sC  s500 
+
+set pop 100000 1500 500 1.0 10 1
+set bc 1
+set gcu -1
+set ures no 
+
+plot 1 11600  6866   0   -350. 350.    0. 500.
+plot 2 11600  6866   0   -350. 350.    0. 500.
+plot 3 10000 10000 180   -400. 400. -400. 400.
+
+set acelib "/mnt/e/Codes/NuclearData/Serpent/endfb71/s2v0_endfb71.xsdata"
